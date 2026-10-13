@@ -17,11 +17,11 @@
   <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/NORD-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/img/hero-kayla-swirl.webp" as="image">
+  <link rel="preload" href="assets/img/hero-keyvisual-1200.webp" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=13">
+  <link rel="stylesheet" href="css/styles.css?v=19">
   <script type="application/ld+json">
   [{"@context":"https://schema.org","@type":"Event","name":"PowerHER Fit Fest Johannesburg","startDate":"2026-11-07T11:00:00+02:00","endDate":"2026-11-07T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"The Chosen Convention & Expo Centre","address":"23 Summit Dr, Rispark, Johannesburg South, 2053"},"image":"https://powerherfitfest.com/assets/img/og-image.jpg","performer":{"@type":"Person","name":"Kayla Itsines"},"offers":{"@type":"Offer","url":"https://powerher.howler.co.za/events/powerher-fit-fest-jhb-7-nov-2026-5a9d","priceCurrency":"ZAR","price":"890"}},
    {"@context":"https://schema.org","@type":"Event","name":"PowerHER Fit Fest Cape Town","startDate":"2026-11-14T11:00:00+02:00","endDate":"2026-11-14T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Allée Bleue Wine Estate","address":"Cnr R45 & R310, Groot Drakenstein, Franschhoek, 7680"},"image":"https://powerherfitfest.com/assets/img/og-image.jpg","performer":{"@type":"Person","name":"Kayla Itsines"},"offers":{"@type":"Offer","url":"https://powerher.howler.co.za/events/powerher-fit-fest-cpt-14-nov-2026-fde2","priceCurrency":"ZAR","price":"890"}}]
@@ -32,42 +32,17 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-pattern" aria-hidden="true">
-        <span>Power<i>her</i>Power<i>her</i>Power<i>her</i></span>
-        <span>Power<i>her</i>Power<i>her</i>Power<i>her</i></span>
-        <span>Power<i>her</i>Power<i>her</i>Power<i>her</i></span>
-        <span>Power<i>her</i>Power<i>her</i>Power<i>her</i></span>
+    <!-- ============ HERO (key visual) ============ -->
+    <section class="hero-banner">
+      <h1 class="sr">Motherkind PowerHER Fit Fest with Investec and Dis-Chem. Kayla Itsines live in Johannesburg on 7 November and Cape Town on 14 November 2026. Join the movement.</h1>
+      <img class="hero-banner-img" src="assets/img/hero-keyvisual.webp"
+           srcset="assets/img/hero-keyvisual-1200.webp 1200w, assets/img/hero-keyvisual.webp 2400w"
+           sizes="100vw" width="2400" height="1350" fetchpriority="high"
+           alt="Motherkind PowerHER Fit Fest with Investec and Dis-Chem: Kayla Itsines, JHB 7 Nov ’26, CPT 14 Nov ’26. Join the movement. You’ve seen her online, now experience her live.">
+      <div class="wrap hero-banner-ctas">
+        <a class="btn btn-primary" data-ticket="jhb">Johannesburg tickets</a>
+        <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
       </div>
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1 class="hero-logo">
-            <img src="assets/img/logo-lockup-cotitle-white.webp" width="1400" height="663"
-                 alt="Motherkind PowerHER Fit Fest">
-          </h1>
-          <p class="hero-credit">Motherkind PowerHER Fit Fest, in partnership with Investec and Dis-Chem</p>
-          <div class="pills">
-            <span class="pill pill-light">JHB • 7 NOV ’26</span>
-            <span class="pill pill-purple">CPT • 14 NOV ’26</span>
-          </div>
-          <p class="hero-title">Join the movement</p>
-          <p class="hero-sub">You’ve seen her online. Now experience her live.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" data-ticket="jhb">Johannesburg tickets</a>
-            <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <img src="assets/img/hero-kayla-swirl.webp" width="1400" height="1348" alt="Kayla Itsines mid-workout" fetchpriority="high">
-          <span class="signature" aria-hidden="true">Kayla Itsines</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ON-SALE STRIP ============ -->
-    <section class="onsale" aria-label="Ticket sales">
-      <div class="wrap" data-onsale></div>
     </section>
 
     <!-- ============ MANIFESTO ============ -->
@@ -75,9 +50,9 @@
       <div class="wrap narrow reveal">
         <p class="eyebrow">For the very first time in South Africa</p>
         <h2 class="display">This one’s for <span class="script">the girls</span></h2>
-        <p class="lead">PowerHER is that feeling you get when you’re around women who make you feel good about being exactly who you are.</p>
+        <p class="lead">Motherkind PowerHER is that feeling you get when you’re around women who make you feel good about being exactly who you are.</p>
         <p>Motherkind is proud to present PowerHER Fit Fest, bringing global fitness icon Kayla Itsines to South Africa for a full day of movement, connection and joy.</p>
-        <p>PowerHER Fit Fest, in partnership with Investec and Dis-Chem, is where we move, sweat, learn and dance. But mostly, we make room for ourselves, laugh with our girls and meet women we might never have crossed paths with.</p>
+        <p>Motherkind PowerHER Fit Fest, in partnership with Investec and Dis-Chem, is where we move, sweat, learn and dance. But mostly, we make room for ourselves, laugh with our girls and meet women we might never have crossed paths with.</p>
         <p class="manifesto-sign">A day to choose you, because you want to.</p>
       </div>
     </section>
@@ -88,7 +63,7 @@
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow"><span class="num" data-bind="hours">11:00 – 21:00</span></p>
-          <h2 class="display">Your PowerHER day</h2>
+          <h2 class="display">Your PowerDAY</h2>
           <p>From your first squat to your last dance, here’s what’s waiting for you.</p>
         </div>
 
@@ -124,7 +99,7 @@
         </div>
 
         <div class="center reveal">
-          <a class="btn btn-ghost" href="experience.html">Explore the PowerHER day</a>
+          <a class="btn btn-ghost" href="experience.html">Explore the PowerDAY</a>
         </div>
       </div>
     </section>
@@ -142,7 +117,7 @@
             <h3 class="city-name">Johannesburg</h3>
             <p class="city-date">Saturday, 7 November 2026</p>
             <ul class="city-meta">
-              <li><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South</li>
+              <li class="venue-row"><img class="venue-mark" src="assets/img/venue-chosen-white.webp" width="414" height="200" alt="The Chosen Venue" loading="lazy"><span><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South</span></li>
               <li><span class="num" data-bind="hours">11:00 – 21:00</span> &nbsp;•&nbsp; 18+</li>
             </ul>
             <div class="city-ctas">
@@ -154,7 +129,7 @@
             <h3 class="city-name">Cape Town</h3>
             <p class="city-date">Saturday, 14 November 2026</p>
             <ul class="city-meta">
-              <li><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek</li>
+              <li class="venue-row"><img class="venue-mark" src="assets/img/venue-allee-bleue-white.webp" width="236" height="200" alt="Allée Bleue" loading="lazy"><span><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek</span></li>
               <li><span class="num" data-bind="hours">11:00 – 21:00</span> &nbsp;•&nbsp; 18+</li>
             </ul>
             <div class="city-ctas">
@@ -176,7 +151,6 @@
           <article class="ticket reveal">
             <header class="ticket-head">
               <h3>General</h3>
-              <p>The full PowerHER Fit Fest experience</p>
             </header>
             <ol class="phases" data-phases></ol>
             <ul class="ticks">
@@ -193,12 +167,10 @@
             <span class="ticket-flag">Meet Kayla</span>
             <header class="ticket-head">
               <h3>VVIP</h3>
-              <p>The ultimate PowerHER Fit Fest experience</p>
             </header>
-            <p class="ticket-price"><span data-bind="vvip">R3,790</span> <small>per person</small></p>
+            <p class="ticket-price"><span data-bind="vvip">R3,790</span></p>
             <ul class="ticks">
               <li><strong>Meet Kayla Itsines, with a photo moment</strong></li>
-              <li>Front-of-stage access <span class="tick-note">(Johannesburg)</span></li>
               <li>Private VVIP Lounge with a dedicated bar</li>
               <li>Private bathrooms</li>
               <li>Luxury goodie bag from Motherkind and partners</li>
@@ -208,29 +180,7 @@
             </ul>
           </article>
         </div>
-        <p class="fine-print reveal">Prices are per person and exclude Howler’s booking fee, which is shown at checkout.</p>
         <div class="center reveal"><a class="btn btn-ghost" href="tickets.html">See PowerTICKET details</a></div>
-      </div>
-    </section>
-
-    <!-- ============ INVESTEC ============ -->
-    <section class="investec">
-      <div class="wrap investec-grid reveal">
-        <div>
-          <img class="investec-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
-          <h2 class="investec-line">Health is the new&nbsp;Wealth.</h2>
-          <p class="investec-sub">PowerHER Fit Fest. The health of your wealth, powered by Investec.</p>
-        </div>
-        <div class="perk">
-          <p class="eyebrow">Power<b>PERK</b> for Investec clients</p>
-          <p class="perk-big">Save 25%</p>
-          <p>Investec Private Banking clients unlock PowerTICKETS with a unique access code.</p>
-          <dl class="perk-prices">
-            <div><dt>General</dt><dd data-bind="investec.general">R667.50</dd></div>
-            <div><dt>VVIP</dt><dd data-bind="investec.vvip">R2,842.50</dd></div>
-          </dl>
-          <a class="btn btn-light" href="tickets.html#investec">Unlock your PowerPERK</a>
-        </div>
       </div>
     </section>
 
@@ -243,8 +193,7 @@
           <h2 class="display">Donate to Power<span class="script">legacy</span></h2>
           <p class="lead">Help us empower Women For Change and drive meaningful impact in the fight against Gender Based Violence.</p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://womenforchange.co.za/donate/" target="_blank" rel="noopener">Donate now</a>
-            <a class="btn btn-ghost" href="https://womenforchange.co.za/" target="_blank" rel="noopener">About Women For Change</a>
+            <a class="btn btn-primary" href="https://womenforchange.co.za/" target="_blank" rel="noopener">About Women For Change</a>
           </div>
         </div>
       </div>
@@ -277,10 +226,10 @@
         <div>
           <p class="eyebrow">Join the Power<b>CIRCLE</b></p>
           <h2 class="display">Come for the workout. <span class="script">Stay for the women.</span></h2>
-          <p>Follow along for lineup drops, behind-the-scenes and everything PowerHER.</p>
+          <p>Follow along for lineup drops, behind-the-scenes and everything Motherkind PowerHER.</p>
         </div>
         <div class="btn-row">
-          <a class="btn btn-outline-light" href="https://www.instagram.com/powerherfitfest/" target="_blank" rel="noopener">@powerherfitfest on Instagram</a>
+          <a class="btn btn-outline-light" href="https://www.instagram.com/powerherfitfest/" target="_blank" rel="noopener">Instagram</a>
           <a class="btn btn-outline-light" href="https://www.tiktok.com/@powerherfitfest" target="_blank" rel="noopener">TikTok</a>
           <a class="btn btn-outline-light" data-share href="#">Send to your girls on WhatsApp</a>
         </div>
@@ -291,7 +240,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=13"></script>
-  <script src="js/layout.js?v=13"></script>
+  <script src="js/config.js?v=19"></script>
+  <script src="js/layout.js?v=19"></script>
 </body>
 </html>

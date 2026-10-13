@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=13">
+  <link rel="stylesheet" href="css/styles.css?v=19">
 </head>
 <body data-page="tickets">
   <div data-ph="header"></div>
@@ -35,16 +35,7 @@
         <span>Power<i>her</i>Power<i>her</i>Power<i>her</i></span>
       </div>
       <div class="wrap">
-        <h1 class="page-title">Power<b>TICKETS</b></h1>
-        <div class="page-partners">
-          <span class="sr">Motherkind PowerHER Fit Fest, in partnership with Investec and Dis-Chem</span>
-          <img class="pp-mk" src="assets/img/partner-motherkind-white.webp" width="900" height="80" alt="">
-          <span class="pp-div" aria-hidden="true"></span>
-          <img class="pp-inv" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="">
-          <span class="pp-div" aria-hidden="true"></span>
-          <img class="pp-dc" src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="">
-        </div>
-        <p class="page-intro">Motherkind is proud to present PowerHER Fit Fest, a full day live with Kayla Itsines. Pick your city, grab your girls and choose your PowerTICKET.</p>
+        <h1 class="page-title logo-type">Power<b>TICKETS</b></h1>
 
         <div class="city-switch" data-city-switch role="group" aria-label="Choose your city">
           <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
@@ -58,25 +49,18 @@
       </div>
     </section>
 
-    <!-- ============ ON-SALE STRIP ============ -->
-    <section class="onsale" aria-label="Ticket sales">
-      <div class="wrap" data-onsale></div>
-    </section>
-
     <!-- ============ GENERAL + VVIP ============ -->
     <section class="section tickets-full" id="choose">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">Choose your Power<b>TICKET</b></p>
           <h2 class="display">Two ways to <span class="script">join us</span></h2>
-          <p>PowerHER Fit Fest, in partnership with Investec and Dis-Chem, is one big day of movement, connection and joy. Both tickets give you the full day. VVIP adds a moment with Kayla and a little extra looking-after.</p>
         </div>
 
         <div class="ticket-grid">
           <article class="ticket reveal" id="general">
             <header class="ticket-head">
               <h3>General</h3>
-              <p>The full PowerHER Fit Fest experience</p>
             </header>
             <ol class="phases" data-phases></ol>
             <p class="ticket-fee">Plus a booking fee of <span class="num" data-current-fee>R89</span> per ticket on Howler. When a phase sells out, the next phase opens at the higher price.</p>
@@ -96,14 +80,12 @@
             <span class="ticket-flag">Meet Kayla</span>
             <header class="ticket-head">
               <h3>VVIP</h3>
-              <p>The ultimate PowerHER Fit Fest experience</p>
             </header>
-            <p class="ticket-price"><span data-bind="vvip">R3,790</span> <small>per person</small></p>
+            <p class="ticket-price"><span data-bind="vvip">R3,790</span></p>
             <p class="ticket-fee">Plus a booking fee of <span class="num" data-bind="bookingFees.vvip">R200</span> per ticket on Howler.</p>
             <p class="ticks-head">Everything in General, plus</p>
             <ul class="ticks">
               <li><strong>Meet Kayla Itsines, with a photo moment</strong></li>
-              <li data-city-only="jhb">Front-of-stage access</li>
               <li>Private VVIP Lounge with a dedicated bar</li>
               <li>Private bathrooms</li>
               <li>Luxury goodie bag from Motherkind and partners</li>
@@ -122,7 +104,7 @@
         <div>
           <img class="investec-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
           <h2 class="investec-line">Health is the new&nbsp;Wealth.</h2>
-          <p class="investec-sub">PowerHER Fit Fest. The health of your wealth, powered by Investec.</p>
+          <p class="investec-sub">Motherkind PowerHER Fit Fest. The health of your wealth, powered by Investec.</p>
         </div>
         <div class="perk">
           <p class="eyebrow">Power<b>PERK</b> for Investec clients</p>
@@ -185,11 +167,6 @@
             <h3>Booking fees</h3>
             <p>Howler adds a booking fee to each ticket, shown at checkout: from <span class="num" data-current-fee>R89</span> for General and <span class="num" data-bind="bookingFees.vvip">R200</span> for VVIP.</p>
           </article>
-          <article class="info reveal">
-            <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
-            <h3>VVIP in Cape Town</h3>
-            <p>Front-of-stage access is part of VVIP in Johannesburg. Everything else in VVIP, including your moment with Kayla, is the same in both cities.</p>
-          </article>
         </div>
         <p class="center reveal"><a class="btn btn-ghost" href="faq.html">More questions? Read the FAQs</a></p>
       </div>
@@ -212,7 +189,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=13"></script>
-  <script src="js/layout.js?v=13"></script>
+  <script src="js/config.js?v=19"></script>
+  <script src="js/layout.js?v=19"></script>
 </body>
 </html>
