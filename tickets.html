@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=22">
+  <link rel="stylesheet" href="css/styles.css?v=25">
 </head>
 <body data-page="tickets">
   <div data-ph="header"></div>
@@ -62,8 +62,8 @@
             <header class="ticket-head">
               <h3>General</h3>
             </header>
-            <ol class="phases" data-phases></ol>
-            <p class="ticket-fee">Plus a booking fee of <span class="num" data-current-fee>R89</span> per ticket on Howler. When a phase sells out, the next phase opens at the higher price.</p>
+            <p class="ticket-price ticket-from"><small>From</small> <span data-current-price>R890</span></p>
+            <p class="ticket-fee">Plus a booking fee of <span class="num" data-current-fee>R89</span> per ticket on Howler.</p>
             <p class="ticks-head">What’s included</p>
             <ul class="ticks">
               <li>Live bootcamp with Kayla Itsines</li>
@@ -104,12 +104,12 @@
         <div>
           <img class="investec-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
           <h2 class="investec-line">Health is the new&nbsp;Wealth.</h2>
-          <p class="investec-sub">Motherkind PowerHER Fit Fest. The health of your wealth, powered by Investec.</p>
+          <p class="investec-sub">Powered by Investec.</p>
         </div>
         <div class="perk">
           <p class="eyebrow">Power<b>PERK</b> for Investec clients</p>
           <p class="perk-big">Save 25%</p>
-          <p>Investec Private Banking clients unlock PowerTICKETS with a unique access code. One price, whichever General phase is on sale.</p>
+          <p>Investec Private Banking clients unlock PowerTICKETS with a unique access code.</p>
           <dl class="perk-prices">
             <div><dt>General</dt><dd data-bind="investec.general">R667.50</dd></div>
             <div><dt>VVIP</dt><dd data-bind="investec.vvip">R2,842.50</dd></div>
@@ -120,8 +120,34 @@
             <li>Enter your code to unlock the Investec General and VVIP tickets.</li>
           </ol>
           <div class="btn-row">
-            <a class="btn btn-light" data-ticket="jhb">JHB on Howler</a>
-            <a class="btn btn-outline-light" data-ticket="cpt">CPT on Howler</a>
+            <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
+            <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIS-CHEM POWERPERK ============ -->
+    <section class="investec dischem" id="dischem">
+      <div class="wrap investec-grid reveal">
+        <div>
+          <img class="investec-logo dischem-logo" src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="Dis-Chem" loading="lazy">
+          <h2 class="investec-line">Better health starts&nbsp;here.</h2>
+          <p class="investec-sub">A PowerPERK for Dis-Chem Better Rewards members.</p>
+        </div>
+        <div class="perk">
+          <p class="eyebrow">Power<b>PERK</b> for Dis-Chem Better Rewards members</p>
+          <p class="perk-big">Save 10%</p>
+          <p>Enjoy 10% off General PowerTICKETS.</p>
+          <ol class="steps">
+            <li>Head to the Howler ticket page for your city.</li>
+            <li>Choose your General PowerTICKET.</li>
+            <li>Continue through the purchase journey.</li>
+            <li>On the payment page, enter your Dis-Chem discount code to apply your 10% discount.</li>
+          </ol>
+          <div class="btn-row">
+            <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
+            <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
           </div>
         </div>
       </div>
@@ -189,7 +215,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=22"></script>
-  <script src="js/layout.js?v=22"></script>
+  <script src="js/config.js?v=25"></script>
+  <script src="js/layout.js?v=25"></script>
 </body>
 </html>

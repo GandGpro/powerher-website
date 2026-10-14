@@ -600,3 +600,45 @@ body:has(.page-hero) .site-header:not(.is-scrolled) .top-link.is-current { backg
 .sched-city-tag { display: inline-block; margin-left: .3em; font-size: .55em; vertical-align: middle; background: var(--aqua); color: var(--purple-ink); padding: .2em .6em; border-radius: 999px; }
 .pd-city .sched-note { margin: -8px 0 18px; text-transform: none; letter-spacing: .02em; font-size: .9rem; }
 @media (min-width: 980px) { .pd-city .sched-panel, .pd-city .sched-list { --sched-time: 108px; } .pd-city .sched-time { font-size: 1.05rem; } .pd-city .sched-event { font-size: .92rem; padding: .85em 1.2em; } }
+
+/* ---------- 14 Oct final changes ---------- */
+.brand img { height: 46px !important; width: auto; }
+.brand { gap: 0; }
+@media (max-width: 520px) { .brand img { height: 40px !important; } }
+/* no JHB / CPT letters behind the city cards */
+.city::before { content: none !important; }
+.ticket-from { margin-bottom: .8rem; }
+.ticket-from small { font-size: .9rem; font-weight: 600; opacity: .7; margin-right: .2em; }
+.ticket:not(.ticket-vvip) .ticket-from { color: var(--purple-deep); }
+/* Dis-Chem PowerPERK band (same layout as Investec) */
+.dischem { background: linear-gradient(135deg, #3fb4cf 0%, #2b8fbf 55%, #4a5fae 100%); }
+.dischem::before { background: radial-gradient(circle, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 65%); }
+.dischem .perk { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.35); }
+.dischem .perk .eyebrow { color: #fff; }
+.dischem .investec-sub { color: rgba(255,255,255,.9); }
+.dischem .steps li::before { background: #fff; color: #2b8fbf; }
+.dischem-logo { width: 170px; }
+.bento .card { padding-top: 58px; }
+
+/* PowerPERK bands: compact, Investec in brand purple (not black) */
+.investec { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%); padding: clamp(40px, 5vw, 64px) 0; }
+.investec::before { width: 520px; height: 520px; right: -180px; top: -200px; }
+.dischem { background: linear-gradient(135deg, #3fb4cf 0%, #2b8fbf 55%, #4a5fae 100%); }
+.investec-grid { gap: 28px; }
+@media (min-width: 900px) { .investec-grid { grid-template-columns: 1fr 1.1fr; gap: 48px; } }
+.investec-logo { width: 140px; margin-bottom: 16px; }
+.dischem-logo { width: 140px; }
+.investec-line { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: .35em; }
+.investec-sub { font-size: 1rem; }
+.perk { padding: clamp(20px, 2.5vw, 28px); border-radius: 22px; }
+.perk .eyebrow { margin-bottom: .6rem; }
+.perk-big { font-size: clamp(2rem, 3.4vw, 2.6rem); }
+.perk-prices { margin: .9rem 0 1rem; }
+.perk-prices div { padding: 8px 14px; }
+.perk-prices dd { font-size: 1.2rem; }
+.perk .steps { margin: .9rem 0 1.1rem; gap: 8px; font-size: .95rem; }
+.perk .steps li { padding-left: 38px; }
+.perk .steps li::before { width: 26px; height: 26px; font-size: .8rem; }
+.perk .btn-row .btn { padding: .85em 1.4em; font-size: .75rem; }
+.investec .steps li::before { background: var(--aqua); }
+.dischem .steps li::before { background: #fff; color: #2b8fbf; }

@@ -33,8 +33,7 @@
     '<header class="site-header">' +
       '<div class="wrap header-inner">' +
         '<a class="brand" href="index.html" aria-label="Motherkind PowerHER Fit Fest home">' +
-          '<img class="brand-mk" src="assets/img/motherkind-dot-purple.webp" alt="Motherkind" width="660" height="59">' +
-          '<img src="assets/img/logo-gradient.webp" alt="PowerHER Fit Fest" width="1000" height="306">' +
+          '<img src="assets/img/logo-header.webp" alt="Motherkind PowerHER Fit Fest" width="1000" height="326">' +
         "</a>" +
         '<nav class="top-nav" aria-label="Main">' +
           NAV.filter(function (n) { return TOP.indexOf(n.id) > -1; }).map(function (n) { return navLink(n, "top-link"); }).join("") +
