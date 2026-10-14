@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20">
+  <link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body data-page="experience">
   <div data-ph="header"></div>
@@ -48,112 +48,90 @@
       </div>
     </section>
 
-    <!-- ============ THE MOMENTS ============ -->
-    <section class="section mist-bg">
+    <!-- ============ YOUR POWERDAY: one block per city (switch shows one at a time) ============ -->
+    <section class="section powerday" id="schedule">
       <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">What’s waiting for you</p>
-          <h2 class="display">Your day, <span class="script">moment by moment</span></h2>
+        <div class="section-head center-head reveal">
+          <p class="eyebrow">Your Power<b>DAY</b></p>
+          <h2 class="display">Pick your city, <span class="script">plan your day</span></h2>
+          <div class="city-switch city-switch-dark" data-city-switch role="group" aria-label="Choose your city">
+            <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
+            <button type="button" data-city="cpt" aria-pressed="false">Cape Town • 14 Nov</button>
+          </div>
         </div>
 
-        <div class="moments">
-          <article class="moment moment-kayla reveal">
-            <div class="moment-art art-purple">
-              <span class="big" aria-hidden="true">01</span>
-              <img src="assets/img/kayla-cutout-2.webp" width="900" height="2085" alt="Kayla Itsines" loading="lazy">
-              <span class="script-word" aria-hidden="true">Kayla</span>
-            </div>
-            <div class="moment-body">
-              <span class="moment-tag">The main event</span>
-              <h3>Live bootcamp with Kayla Itsines</h3>
-              <p>You’ve seen her online. Now experience her live. The global fitness icon and woman behind the Sweat app is in South Africa for the very first time, leading one bootcamp with thousands of PowerLADIES moving together.</p>
-              <p>It’s the moment you’ll talk about for years, and you get to share it with your girls.</p>
-            </div>
-          </article>
-
-          <article class="moment reveal">
-            <div class="moment-art art-aqua">
-              <span class="big" aria-hidden="true">02</span>
-              <span class="script-word" aria-hidden="true">Move</span>
-            </div>
-            <div class="moment-body">
-              <span class="moment-tag">All day</span>
-              <h3>Workouts with SA’s top trainers</h3>
-              <p>Move all day with some of South Africa’s best. Try something you’ve never done before, find your new favourite, then go again. Every session is open to you, whatever your pace.</p>
+        <div class="pd-city" data-city-only="jhb">
+          <article class="pd-card pd-jhb">
+            <span class="pd-letters" aria-hidden="true">JHB</span>
+            <img class="pd-kayla" src="assets/img/kayla-cutout-2.webp" width="900" height="2085" alt="" loading="lazy">
+            <div class="pd-card-body">
+              <span class="sched-count" data-countdown="jhb"></span>
+              <h3 class="pd-name">Johannesburg</h3>
+              <p class="pd-date">Saturday, 7 November 2026</p>
+              <div class="venue-row pd-venue"><img class="venue-mark" src="assets/img/venue-chosen-white.webp" width="414" height="200" alt="" loading="lazy"><span><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South</span></div>
+              <p class="pd-hours"><span class="num" data-bind="hours">11:00 – 21:00</span> • 18+</p>
+              <div class="pd-ctas">
+                <a class="btn btn-light" data-ticket="jhb">Get JHB tickets</a>
+                <a class="link-arrow" href="https://maps.google.com/?q=The+Chosen+Convention+%26+Expo+Centre+23+Summit+Dr+Rispark" target="_blank" rel="noopener">Directions</a>
+              </div>
             </div>
           </article>
-
-          <article class="moment reveal">
-            <div class="moment-art art-mist">
-              <span class="big" aria-hidden="true">03</span>
-              <span class="script-word" aria-hidden="true">Listen</span>
-            </div>
-            <div class="moment-body">
-              <span class="moment-tag">Power<b>VOICES</b> announced soon</span>
-              <h3>The Pulse Talks</h3>
-              <p>Real conversations with incredible women. The kind that leave you feeling lighter, stronger and a little more sure of yourself, and that you’ll still be thinking about on the drive home.</p>
-            </div>
-          </article>
-
-          <article class="moment reveal">
-            <div class="moment-art art-lilac">
-              <span class="big" aria-hidden="true">04</span>
-              <span class="script-word" aria-hidden="true">Discover</span>
-            </div>
-            <div class="moment-body">
-              <span class="moment-tag">Refuel &amp; explore</span>
-              <h3>Food and Brand Village</h3>
-              <p>Refuel, wander and discover the feel-good brands, bites and wellness experiences you’ll want to take home. Grab a bite between sessions, find something new and catch your breath with your girls.</p>
-            </div>
-          </article>
-
-          <article class="moment reveal">
-            <div class="moment-art art-gradient">
-              <span class="big" aria-hidden="true">05</span>
-              <span class="script-word" aria-hidden="true">Dance</span>
-            </div>
-            <div class="moment-body">
-              <span class="moment-tag">Power<b>PERFORMERS</b> announced soon</span>
-              <h3>The PowerHER After Party</h3>
-              <p>End the day the best way: dancing with your girls to an all-female festival lineup. Because power looks like strength, and it looks like joy too.</p>
-            </div>
-          </article>
+          <div class="sched-panel">
+            <h3 class="sched-title">Your Power<b>DAY</b> <span class="sched-city-tag">JHB</span></h3>
+            <p class="sched-note">Saturday, 7 November 2026 • The Chosen Convention &amp; Expo Centre</p>
+            <div class="sched-head" aria-hidden="true"><span>Time</span><span>Event schedule</span></div>
+            <ol class="sched-list">
+              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Doors open &amp; registration</span></li>
+              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Explore the Power<b>PARTNER</b> experiences</span></li>
+              <li class="sched-row"><span class="sched-time num">13:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Health of your Wealth | Investec</span></li>
+              <li class="sched-row"><span class="sched-time num">13:30</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Breathwork</span></li>
+              <li class="sched-row"><span class="sched-time num">14:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pillars of PowerHER</span></li>
+              <li class="sched-row"><span class="sched-time num">14:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pulse Talks ft. Power<b>VOICES</b></span></li>
+              <li class="sched-row"><span class="sched-time num">15:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Refuel, connect &amp; explore</span></li>
+              <li class="sched-row"><span class="sched-time num">15:45</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Dance warm-up</span></li>
+              <li class="sched-row is-key"><span class="sched-time num">16:15</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla Itsines bootcamp</span></li>
+              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla meet &amp; greet</span></li>
+              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">After party ft. Power<b>PERFORMERS</b></span></li>
+              <li class="sched-row"><span class="sched-time num">21:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">End</span></li>
+            </ol>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ CITIES ============ -->
-    <section class="section cities">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Two cities. Two unforgettable Saturdays.</p>
-          <h2 class="display">Choose your city</h2>
-        </div>
-        <div class="city-grid">
-          <article class="city city-jhb reveal">
-            <span class="city-count" data-countdown="jhb"></span>
-            <h3 class="city-name">Johannesburg</h3>
-            <p class="city-date">Saturday, 7 November 2026</p>
-            <ul class="city-meta">
-              <li class="venue-row"><img class="venue-mark" src="assets/img/venue-chosen-white.webp" width="414" height="200" alt="The Chosen Venue" loading="lazy"><span><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South</span></li>
-              <li><span class="num" data-bind="hours">11:00 – 21:00</span> &nbsp;•&nbsp; 18+</li>
-            </ul>
-            <div class="city-ctas">
-              <a class="link-arrow" href="https://maps.google.com/?q=The+Chosen+Convention+%26+Expo+Centre+23+Summit+Dr+Rispark" target="_blank" rel="noopener">Directions</a>
+        <div class="pd-city" data-city-only="cpt" hidden>
+          <article class="pd-card pd-cpt">
+            <span class="pd-letters" aria-hidden="true">CPT</span>
+            <img class="pd-kayla" src="assets/img/kayla-cutout.webp" width="1100" height="2314" alt="" loading="lazy">
+            <div class="pd-card-body">
+              <span class="sched-count" data-countdown="cpt"></span>
+              <h3 class="pd-name">Cape Town</h3>
+              <p class="pd-date">Saturday, 14 November 2026</p>
+              <div class="venue-row pd-venue"><img class="venue-mark" src="assets/img/venue-allee-bleue-white.webp" width="236" height="200" alt="" loading="lazy"><span><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek</span></div>
+              <p class="pd-hours"><span class="num" data-bind="hours">11:00 – 21:00</span> • 18+</p>
+              <div class="pd-ctas">
+                <a class="btn btn-light" data-ticket="cpt">Get CPT tickets</a>
+                <a class="link-arrow" href="https://maps.google.com/?q=Allee+Bleue+Wine+Estate+Franschhoek" target="_blank" rel="noopener">Directions</a>
+              </div>
             </div>
           </article>
-          <article class="city city-cpt reveal">
-            <span class="city-count" data-countdown="cpt"></span>
-            <h3 class="city-name">Cape Town</h3>
-            <p class="city-date">Saturday, 14 November 2026</p>
-            <ul class="city-meta">
-              <li class="venue-row"><img class="venue-mark" src="assets/img/venue-allee-bleue-white.webp" width="236" height="200" alt="Allée Bleue" loading="lazy"><span><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek</span></li>
-              <li><span class="num" data-bind="hours">11:00 – 21:00</span> &nbsp;•&nbsp; 18+</li>
-            </ul>
-            <div class="city-ctas">
-              <a class="link-arrow" href="https://maps.google.com/?q=Allee+Bleue+Wine+Estate+Franschhoek" target="_blank" rel="noopener">Directions</a>
-            </div>
-          </article>
+          <div class="sched-panel">
+            <h3 class="sched-title">Your Power<b>DAY</b> <span class="sched-city-tag">CPT</span></h3>
+            <p class="sched-note">Saturday, 14 November 2026 • Allée Bleue Wine Estate</p>
+            <div class="sched-head" aria-hidden="true"><span>Time</span><span>Event schedule</span></div>
+            <ol class="sched-list">
+              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Doors open &amp; registration</span></li>
+              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Explore the Power<b>PARTNER</b> experiences</span></li>
+              <li class="sched-row"><span class="sched-time num">13:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Health of your Wealth | Investec</span></li>
+              <li class="sched-row"><span class="sched-time num">13:30</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Breathwork</span></li>
+              <li class="sched-row"><span class="sched-time num">14:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pillars of PowerHER</span></li>
+              <li class="sched-row"><span class="sched-time num">14:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pulse Talks ft. Power<b>VOICES</b></span></li>
+              <li class="sched-row"><span class="sched-time num">15:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Refuel, connect &amp; explore</span></li>
+              <li class="sched-row"><span class="sched-time num">15:45</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Dance warm-up</span></li>
+              <li class="sched-row is-key"><span class="sched-time num">16:15</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla Itsines bootcamp</span></li>
+              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla meet &amp; greet</span></li>
+              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">After party ft. Power<b>PERFORMERS</b></span></li>
+              <li class="sched-row"><span class="sched-time num">21:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">End</span></li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
@@ -175,7 +153,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=20"></script>
-  <script src="js/layout.js?v=20"></script>
+  <script src="js/config.js?v=22"></script>
+  <script src="js/layout.js?v=22"></script>
 </body>
 </html>
