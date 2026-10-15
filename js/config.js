@@ -8,7 +8,7 @@ window.PH = {
   /* PAGES THAT ARE LIVE
      Only these appear in the menu and footer. When a new page is built,
      add its name here (e.g. "legacy") and it shows up everywhere. */
-  livePages: ["home", "tickets", "experience", "faq", "contact"],
+  livePages: ["home", "tickets", "experience", "partners", "faq", "contact"],
 
   /* CONTACT DETAILS (Contact page and FAQs). Leave "" to hide a line. */
   contact: {
