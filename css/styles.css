@@ -712,3 +712,55 @@ body:has(.page-hero) .site-header:not(.is-scrolled) .top-link.is-current { backg
 .pi-orb::after { content: ""; position: absolute; inset: -7%; border-radius: 50%; border: 2px dashed rgba(120,93,167,.35); }
 .pi-visual .pi-mark { position: relative; z-index: 1; width: 68%; filter: brightness(0) invert(1); animation: spin 40s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .pi-visual .pi-mark { animation: none; } }
+.partners-logo { text-align: center; padding-bottom: 0; }
+.partners-logo img { width: min(460px, 80%); height: auto; margin: 0 auto; display: block; }
+
+/* PowerTICKETS photo beside "Two ways to join us" (cut-out, blends into page) */
+.choose-head { --bleed: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter)); display: grid; gap: 0; grid-template-columns: 1fr; align-items: center; }
+.choose-head .section-head { margin-bottom: 0; position: relative; z-index: 2; }
+.choose-photo { margin: 0 calc(-1 * var(--gutter)); position: relative; z-index: 0; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 96%); mask-image: linear-gradient(to bottom, #000 62%, transparent 96%); }
+.choose-photo img { display: block; width: 100%; height: auto; }
+.choose-head + .ticket-grid { position: relative; z-index: 1; margin-top: 28px; }
+@media (min-width: 900px) {
+  .choose-head { grid-template-columns: 1.15fr .85fr; gap: 24px; }
+  .choose-photo { margin: 0 0 0 calc(-1 * var(--bleed)); width: calc(100% + var(--bleed)); max-width: none; }
+  .choose-head + .ticket-grid { margin-top: -120px; }
+}
+
+/* ---------- PowerPARTNERS flip tiles ---------- */
+.ptile-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .ptile-grid { grid-template-columns: repeat(2, 1fr); } .ptile-grid-1 { grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; } }
+.ptile { display: grid; border-radius: var(--radius); overflow: hidden; min-height: 320px; box-shadow: var(--shadow); isolation: isolate; }
+.ptile > div { grid-area: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px); text-align: center; transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1), visibility .35s; }
+.ptile-front { color: #fff; }
+.ptile-back { background: #f6f1fb; color: var(--purple-ink); opacity: 0; visibility: hidden; transform: scale(.97); position: relative; }
+.ptile.is-open .ptile-front { opacity: 0; visibility: hidden; transform: scale(1.03); }
+.ptile.is-open .ptile-back { opacity: 1; visibility: visible; transform: none; }
+.ptile-logo { max-height: 64px; width: auto; max-width: min(100%, 300px); }
+.ptile-logo-tall { max-height: 100px; }
+.ptile-logo-sm { max-height: 40px; width: auto; max-width: min(100%, 220px); }
+.ptile-logo-sm.ptile-logo-tall { max-height: 64px; }
+.ptile-back p { margin: 0; max-width: 52ch; font-size: 1.04rem; line-height: 1.6; color: inherit; }
+.ptile-back { gap: 14px; }
+.ptile-back .ptile-logo-sm { margin-bottom: 8px; }
+.ptile-line { font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; font-size: 1.3rem !important; }
+.ptile-link { font-weight: 700; color: inherit; margin-top: 6px; }
+.ptile-btn { font: inherit; font-family: "NORD", "Figtree", sans-serif; font-weight: 700; font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: inherit; background: transparent; border: 2px solid currentColor; border-radius: 14px; padding: 14px 28px; cursor: pointer; transition: background .2s, color .2s; }
+.ptile-btn:hover, .ptile-btn:focus-visible { background: #fff; color: var(--purple-ink); }
+.ptile-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; color: inherit; cursor: pointer; border-radius: 50%; }
+.ptile-close:hover, .ptile-close:focus-visible { background: rgba(0,0,0,.06); }
+.ptile-close svg { width: 26px; height: 26px; }
+/* brand colours: front tile + back tint */
+.pt-motherkind .ptile-front { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%); }
+.pt-motherkind .ptile-back { background: #f1eaf8; color: #4a2f74; }
+.pt-investec .ptile-front { background: #000; }
+.pt-investec .ptile-back { background: #f2f2f2; color: #111; }
+.pt-dischem .ptile-front { background: linear-gradient(135deg, #3fb4cf 0%, #2b8fbf 55%, #4a5fae 100%); }
+.pt-dischem .ptile-back { background: #e8f5fa; color: #1d5f86; }
+.pt-glow .ptile-front { background: var(--gradient); }
+.pt-glow .ptile-back { background: #ecf8fb; color: #3b2a63; }
+.pt-gg .ptile-front { background: var(--purple-ink); }
+.pt-gg .ptile-back { background: #f3eee6; color: #2c1a45; }
+@media (prefers-reduced-motion: reduce) { .ptile > div { transition: none; } }
+.ptile-back { padding-top: 72px !important; }

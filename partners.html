@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=28">
+  <link rel="stylesheet" href="css/styles.css?v=31">
 </head>
 <body data-page="partners">
   <div data-ph="header"></div>
@@ -39,19 +39,10 @@
       </div>
     </section>
 
-    <!-- ============ INTRO + OFFICIAL LOCKUP ============ -->
-    <section class="section partners-intro">
-      <div class="wrap pi-grid">
-        <div class="pi-copy reveal">
-          <p class="eyebrow">The brands in our corner</p>
-          <h2 class="display">Every great day needs <span class="script">great company</span></h2>
-          <p class="lead">Motherkind is proud to present PowerHER Fit Fest, bringing Kayla Itsines to South Africa this November.</p>
-          <p>PowerHER Fit Fest, in partnership with Investec and Dis-Chem, brings together movement, wellbeing and connection. Our PowerPARTNERS are the brands who believe in that feeling as much as we do, and who help make every part of your PowerDAY happen.</p>
-        </div>
-        <div class="pi-visual reveal" aria-hidden="true">
-          <span class="pi-orb"></span>
-          <img class="pi-mark" src="assets/img/ph-logo-purple.webp" width="600" height="597" alt="" loading="lazy">
-        </div>
+    <!-- ============ INTRO: LOGO ============ -->
+    <section class="section partners-logo">
+      <div class="wrap reveal">
+        <img src="assets/img/logo-header.webp" width="1000" height="326" alt="Motherkind PowerHER Fit Fest">
       </div>
     </section>
 
@@ -61,46 +52,56 @@
         <div class="section-head reveal">
           <p class="eyebrow">Presented by</p>
         </div>
-        <article class="partner-card partner-card-lead reveal">
-          <div class="partner-tile tile-motherkind"><img src="assets/img/partner-motherkind-white.webp" width="1600" height="138" alt="Motherkind"></div>
-          <div class="partner-copy">
-            <h3>Motherkind</h3>
-            <p>The heart behind PowerHER Fit Fest. Motherkind brings Kayla Itsines to South Africa for the very first time, for a day built around women showing up for themselves and for each other.</p>
-            <p class="partner-extra">Look out for Motherkind in every VVIP PowerKIT, including the Motherkind yoga mat and a luxury goodie bag.</p>
-          </div>
-        </article>
+        <div class="ptile-grid ptile-grid-1">
+          <article class="ptile pt-motherkind ptile-wide reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="ptile-logo" src="assets/img/partner-motherkind-white.webp" width="1600" height="138" alt="Motherkind" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-motherkind">Read more<span class="sr"> about Motherkind</span></button>
+            </div>
+            <div class="ptile-back" id="pt-motherkind" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close Motherkind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm" src="assets/img/partner-motherkind-black.webp" width="1600" height="138" alt="" loading="lazy">
+              <p>The heart behind PowerHER Fit Fest. Motherkind brings Kayla Itsines to South Africa for the very first time, for a day built around women showing up for themselves and for each other.</p>
+              <p>Look out for Motherkind in every VVIP PowerKIT, including the Motherkind yoga mat and a luxury goodie bag.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CO-TITLE PARTNERS ============ -->
+    <!-- ============ TITLE PARTNERS ============ -->
     <section class="section partner-tier mist-bg">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">Title Partners</p>
         </div>
-        <div class="partner-grid">
-          <article class="partner-card reveal">
-            <div class="partner-tile tile-investec">
-              <img src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
-              <span class="tile-badge">Save 25%</span>
+        <div class="ptile-grid">
+          <article class="ptile pt-investec reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="ptile-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-investec">Read more<span class="sr"> about Investec</span></button>
             </div>
-            <div class="partner-copy">
-              <p class="partner-line">The Health of Your Wealth.</p>
+            <div class="ptile-back" id="pt-investec" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close Investec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm" src="assets/img/partner-investec-black.webp" width="700" height="139" alt="" loading="lazy">
+              <p class="ptile-line">The Health of Your Wealth.</p>
               <p>Because feeling good runs deeper than one workout. Join Investec on the day for The Health of Your Wealth, a session on looking after your future self.</p>
-              <p class="partner-extra"><strong>Investec Private Banking clients</strong> save 25% on PowerTICKETS with a unique access code.</p>
-              <a class="link-arrow" href="tickets.html#investec">See the Investec PowerPERK</a>
+              <p><strong>Investec Private Banking clients</strong> save 25% on PowerTICKETS with a unique access code.</p>
+              <a class="ptile-link" href="tickets.html#investec">See the Investec PowerPERK</a>
             </div>
           </article>
-          <article class="partner-card reveal">
-            <div class="partner-tile tile-dischem">
-              <img src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="Dis-Chem" loading="lazy">
-              <span class="tile-badge">Save 10%</span>
+          <article class="ptile pt-dischem reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="ptile-logo" src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="Dis-Chem" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-dischem">Read more<span class="sr"> about Dis-Chem</span></button>
             </div>
-            <div class="partner-copy">
-              <p class="partner-line">Feel good, inside and out.</p>
+            <div class="ptile-back" id="pt-dischem" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close Dis-Chem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm" src="assets/img/partner-dischem-black.webp" width="700" height="180" alt="" loading="lazy">
+              <p class="ptile-line">Feel good, inside and out.</p>
               <p>From everyday wellness to feel-good self-care, Dis-Chem is right there with you, before, during and long after your PowerDAY.</p>
-              <p class="partner-extra"><strong>Dis-Chem Better Rewards members</strong> enjoy 10% off General PowerTICKETS.</p>
-              <a class="link-arrow" href="tickets.html#dischem">See the Dis-Chem PowerPERK</a>
+              <p><strong>Dis-Chem Better Rewards members</strong> enjoy 10% off General PowerTICKETS.</p>
+              <a class="ptile-link" href="tickets.html#dischem">See the Dis-Chem PowerPERK</a>
             </div>
           </article>
         </div>
@@ -114,19 +115,27 @@
           <p class="eyebrow">Power<b>CREATORS</b></p>
           <h2 class="display">The teams <span class="script">behind the day</span></h2>
         </div>
-        <div class="partner-grid">
-          <article class="partner-card reveal">
-            <div class="partner-tile tile-glow"><img src="assets/img/creator-glow-white.webp" width="700" height="432" alt="Glow Social Club" loading="lazy"></div>
-            <div class="partner-copy">
-              <h3>Glow Social Club</h3>
+        <div class="ptile-grid">
+          <article class="ptile pt-glow reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="ptile-logo ptile-logo-tall" src="assets/img/creator-glow-white.webp" width="700" height="432" alt="Glow Social Club" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-glow">Read more<span class="sr"> about Glow Social Club</span></button>
+            </div>
+            <div class="ptile-back" id="pt-glow" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close Glow Social Club"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm ptile-logo-tall" src="assets/img/creator-glow-black.webp" width="700" height="432" alt="" loading="lazy">
               <p>Creating spaces where women come together to move, connect and glow.</p>
             </div>
           </article>
-          <article class="partner-card reveal">
-            <div class="partner-tile tile-gg"><img src="assets/img/creator-gg-white.webp" width="900" height="250" alt="G&amp;G The Goosebumps Company" loading="lazy"></div>
-            <div class="partner-copy">
-              <h3>G&amp;G, The Goosebumps Company</h3>
-              <p>The team behind moments that give you goosebumps, bringing PowerHER Fit Fest to life in Johannesburg and Cape Town.</p>
+          <article class="ptile pt-gg reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="ptile-logo ptile-logo-tall" src="assets/img/creator-gg-white.webp" width="900" height="250" alt="G&amp;G The Goosebumps Company" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-gg">Read more<span class="sr"> about G&amp;G, The Goosebumps Company</span></button>
+            </div>
+            <div class="ptile-back" id="pt-gg" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close G&amp;G, The Goosebumps Company"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm ptile-logo-tall" src="assets/img/creator-gg-black.webp" width="900" height="250" alt="" loading="lazy">
+              <p>Founded in 2003, G&amp;G exists to gift its fans life-changing event experiences that transcend the ordinary, while offering valued brand partners a radical gateway to build authentic, lasting relationships.</p>
             </div>
           </article>
         </div>
@@ -137,7 +146,24 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=28"></script>
-  <script src="js/layout.js?v=28"></script>
+  <script src="js/config.js?v=31"></script>
+  <script src="js/layout.js?v=31"></script>
+  <script>
+  /* Partner tiles: tap "Read more" to turn the tile over, × or Esc to close */
+  (function () {
+    function setOpen(tile, open) {
+      tile.classList.toggle("is-open", open);
+      tile.querySelector(".ptile-btn").setAttribute("aria-expanded", open);
+      tile.querySelector(".ptile-back").setAttribute("aria-hidden", !open);
+      tile.querySelector(".ptile-front").setAttribute("aria-hidden", open);
+      (open ? tile.querySelector(".ptile-close") : tile.querySelector(".ptile-btn")).focus({ preventScroll: true });
+    }
+    document.querySelectorAll("[data-ptile]").forEach(function (tile) {
+      tile.querySelector(".ptile-btn").addEventListener("click", function () { setOpen(tile, true); });
+      tile.querySelector(".ptile-close").addEventListener("click", function () { setOpen(tile, false); });
+      tile.addEventListener("keydown", function (e) { if (e.key === "Escape" && tile.classList.contains("is-open")) setOpen(tile, false); });
+    });
+  })();
+  </script>
 </body>
 </html>
