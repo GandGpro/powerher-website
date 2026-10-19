@@ -764,3 +764,37 @@ body:has(.page-hero) .site-header:not(.is-scrolled) .top-link.is-current { backg
 .pt-gg .ptile-back { background: #f3eee6; color: #2c1a45; }
 @media (prefers-reduced-motion: reduce) { .ptile > div { transition: none; } }
 .ptile-back { padding-top: 72px !important; }
+/* Affiliate partner tiles (text wordmarks until logo files are supplied) */
+.ptile-wordmark { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1; color: #fff; }
+.ptile-wordmark-sm { font-size: 1.6rem; color: inherit; margin-bottom: 8px; }
+.wm-skin { font-family: "Figtree", sans-serif; font-weight: 400; letter-spacing: .02em; }
+.wm-skin b { font-weight: 800; letter-spacing: .08em; }
+.wm-barebells { font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; letter-spacing: -.02em; }
+.ptile-small { font-size: .9rem !important; opacity: .8; }
+.pt-skin .ptile-front { background: #4d5257; }
+.pt-skin .ptile-back { background: #f1f2f3; color: #3a3e42; }
+.pt-barebells .ptile-front { background: #141414; }
+.pt-barebells .ptile-back { background: #f4f1ec; color: #1a1a1a; }
+
+/* PowerPARTNERS tiles in PowerHER colours (overrides the brand-coloured tiles above) */
+.pt-motherkind .ptile-front { background: var(--gradient); }
+.pt-investec   .ptile-front { background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-ink) 100%); }
+.pt-dischem    .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-skin       .ptile-front { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%); }
+.pt-barebells  .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, var(--purple) 100%); }
+.pt-glow       .ptile-front { background: linear-gradient(135deg, var(--purple) 0%, var(--aqua-deep) 100%); }
+.pt-gg         .ptile-front { background: var(--purple-ink); }
+/* backs: soft PowerHER tints with plum text */
+.pt-motherkind .ptile-back, .pt-skin .ptile-back, .pt-gg .ptile-back { background: #f1ecf8; color: var(--purple-ink); }
+.pt-investec .ptile-back, .pt-glow .ptile-back { background: #f4f1fa; color: var(--purple-ink); }
+.pt-dischem .ptile-back, .pt-barebells .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+
+/* PowerPARTNERS: one colour per tier (overrides the per-tile colours above) */
+.pt-motherkind .ptile-front { background: var(--gradient); }
+.pt-investec .ptile-front, .pt-dischem .ptile-front { background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-ink) 100%); }
+.pt-skin .ptile-front, .pt-barebells .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-glow .ptile-front, .pt-gg .ptile-front { background: linear-gradient(135deg, var(--purple) 0%, #634a90 100%); }
+.pt-motherkind .ptile-back { background: #eef2f8; color: var(--purple-ink); }
+.pt-investec .ptile-back, .pt-dischem .ptile-back { background: #f1ecf8; color: var(--purple-ink); }
+.pt-skin .ptile-back, .pt-barebells .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+.pt-glow .ptile-back, .pt-gg .ptile-back { background: #f4f1fa; color: var(--purple-ink); }
