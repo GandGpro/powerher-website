@@ -798,3 +798,201 @@ body:has(.page-hero) .site-header:not(.is-scrolled) .top-link.is-current { backg
 .pt-investec .ptile-back, .pt-dischem .ptile-back { background: #f1ecf8; color: var(--purple-ink); }
 .pt-skin .ptile-back, .pt-barebells .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
 .pt-glow .ptile-back, .pt-gg .ptile-back { background: #f4f1fa; color: var(--purple-ink); }
+/* PowerDAY schedule: second line naming hosts, speakers and artists */
+.sched-who { display: block; margin-top: .35em; font-family: "Figtree", sans-serif; font-weight: 500; text-transform: none; font-size: .8em; letter-spacing: 0; line-height: 1.35; opacity: .92; }
+.sched-who b { font-weight: 800; }
+.sched-event:has(.sched-who) { border-radius: 22px; }
+
+/* PowerDAY: schedule rows back to one line; after-party row links to the line-up */
+a.sched-link { text-decoration: none; display: block; }
+a.sched-link:hover { filter: brightness(1.06); }
+
+/* ---------- PowerPERFORMERS line-up (JHB + CPT) ---------- */
+.lineup { background: var(--mist); }
+.lineup .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+.lu-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .lu-grid { grid-template-columns: 1fr 1fr; } }
+.lu-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.lu-head { padding: 28px 32px 24px; color: #fff; }
+.lu-jhb .lu-head { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%); }
+.lu-cpt .lu-head { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.lu-city { margin: 0; font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.01em; color: #fff; }
+.lu-when { margin: 6px 0 0; font-size: .95rem; opacity: .92; }
+.lu-list { list-style: none; margin: 0; padding: 10px 32px 26px; }
+.lu-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(120,93,167,.14); }
+.lu-row:last-child { border-bottom: 0; }
+.lu-time { font-weight: 700; color: var(--ink-soft); font-size: .95rem; }
+.lu-name { font-family: "Outfit", "Figtree", sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.05rem; color: var(--purple-ink); letter-spacing: .01em; }
+.lu-tag { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--purple); background: #f1ecf8; border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+.lu-row.is-head .lu-name { font-weight: 800; font-size: 1.35rem; color: var(--purple-deep); }
+.lu-cpt .lu-tag { color: #1f7f98; background: #e6f6f9; }
+.lu-cpt .lu-row.is-head .lu-name { color: #1f7f98; }
+@media (max-width: 480px) { .lu-head { padding: 22px 20px 18px; } .lu-list { padding: 6px 20px 18px; } .lu-row { grid-template-columns: 52px 1fr auto; gap: 10px; } .lu-row.is-head .lu-name { font-size: 1.15rem; } }
+/* Line-up: headliners are bold only (same size and colour as everyone else) */
+.lu-name { font-weight: 500; }
+.lu-row.is-head .lu-name, .lu-cpt .lu-row.is-head .lu-name { font-size: 1.05rem; font-weight: 800; color: var(--purple-ink); }
+@media (max-width: 480px) { .lu-row.is-head .lu-name { font-size: 1.05rem; } }
+
+/* ---------- PowerDAY: two city cards + one shared schedule ---------- */
+.pd-cities-sec { background: #fff; }
+.pd-cities { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .pd-cities { grid-template-columns: 1fr 1fr; } }
+.pdc { position: relative; overflow: hidden; border-radius: 28px; color: #fff; padding: clamp(26px, 3.5vw, 40px); box-shadow: 0 30px 60px -30px rgba(46,27,69,.5); }
+.pdc.pd-jhb { background: radial-gradient(120% 120% at 85% 0%, #9a80c6 0%, var(--purple) 45%, var(--purple-deep) 100%); }
+.pdc.pd-cpt { background: radial-gradient(120% 120% at 85% 0%, #6fd4e6 0%, #3aaecd 45%, var(--purple) 100%); }
+.pdc .pd-date { margin-bottom: .7em; }
+.pdc .sched-count { margin-bottom: 14px; }
+/* shared schedule with one large Kayla */
+.pd-shared { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 980px) { .pd-shared { grid-template-columns: .8fr 1.2fr; gap: 40px; } }
+.pd-kayla-wrap { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 320px; }
+.pd-kayla-glow { position: absolute; left: 50%; top: 50%; width: 88%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(108,204,222,.55) 0%, rgba(120,93,167,.25) 45%, rgba(120,93,167,0) 70%); }
+.pd-kayla-big { position: relative; width: auto; height: min(760px, 80vh); max-width: 100%; object-fit: contain; filter: drop-shadow(0 30px 40px rgba(46,27,69,.35)); }
+.pd-shared .sched-panel { max-width: none; margin: 0; }
+.pd-shared .sched-note { margin: -10px 0 20px; text-transform: none; letter-spacing: .02em; font-size: 1rem; }
+@media (min-width: 980px) { .pd-shared .sched-panel, .pd-shared .sched-list { --sched-time: 108px; } .pd-shared .sched-time { font-size: 1.05rem; } .pd-shared .sched-event { font-size: .92rem; padding: .85em 1.2em; } }
+@media (max-width: 979px) { .pd-kayla-big { height: 380px; } .pd-kayla-wrap { min-height: 0; } }
+.pd-cities-sec .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+@media (max-width: 600px) { .pd-kayla-big { height: 260px; } .pd-shared { gap: 8px; } }
+
+/* PowerDAY schedule: centred on a soft PowerHER-colour background (no large image) */
+.pd-bg { position: relative; overflow: hidden; isolation: isolate;
+  background:
+    radial-gradient(45% 55% at 12% 20%, rgba(108,204,222,.45) 0%, rgba(108,204,222,0) 70%),
+    radial-gradient(45% 55% at 88% 80%, rgba(120,93,167,.40) 0%, rgba(120,93,167,0) 70%),
+    radial-gradient(35% 40% at 85% 15%, rgba(51,196,216,.25) 0%, rgba(51,196,216,0) 70%),
+    radial-gradient(35% 40% at 15% 85%, rgba(83,49,117,.22) 0%, rgba(83,49,117,0) 70%),
+    #f3f1f8; }
+.pd-bg .pd-pattern { position: absolute; inset: -5% -10%; z-index: -1; opacity: .07; color: var(--purple); pointer-events: none; }
+.pd-shared { display: block; max-width: 760px; margin: 0 auto; }
+.pd-shared .sched-panel { box-shadow: 0 40px 80px -40px rgba(46,27,69,.6); }
+
+/* ================= PowerDAY v3: one continuous story ================= */
+.pd-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.pd-jump a { color: #fff; text-decoration: none; font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; padding: 10px 18px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.6); transition: background .2s, color .2s; }
+.pd-jump a:hover, .pd-jump a:focus-visible { background: #fff; color: var(--purple-deep); }
+.pd-story { background: linear-gradient(180deg, #fff 0%, #f6f3fb 45%, var(--mist) 100%); }
+.pd-story .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+.tl { max-width: 920px; }
+.tl-phase { --tl-time: 84px; position: relative; margin-top: clamp(40px, 6vw, 72px); }
+.tl-phase:first-of-type { margin-top: 0; }
+.tl-phase-head { display: flex; align-items: center; gap: 16px; }
+.tl-num { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--gradient); color: #fff; font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; font-size: 1.05rem; flex: 0 0 auto; box-shadow: 0 10px 24px -12px rgba(83,49,117,.7); }
+.tl-phase-title { margin: 0; font-family: var(--f-head); font-weight: 700; text-transform: uppercase; color: var(--purple-ink); font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: -.01em; }
+.tl-phase-intro { margin: 8px 0 18px 68px; font-family: var(--f-script); font-size: clamp(1.25rem, 2.2vw, 1.55rem); color: var(--purple); }
+.tl-list { list-style: none; margin: 0 0 0 25px; padding: 6px 0 6px 0; border-left: 2px solid transparent; border-image: linear-gradient(180deg, var(--aqua-deep), var(--purple)) 1; }
+.tl-item { position: relative; display: grid; grid-template-columns: var(--tl-time) 1fr; gap: 18px; align-items: start; padding: 14px 0 14px 30px; }
+.tl-dot { position: absolute; left: -8px; top: 22px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--aqua-deep); }
+.tl-time { font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; color: var(--purple-deep); font-size: 1.05rem; padding-top: 2px; }
+.tl-name { margin: 0 0 4px; font-family: "Outfit", "Figtree", sans-serif; font-weight: 800; text-transform: uppercase; font-size: 1.05rem; color: var(--purple-ink); letter-spacing: .01em; }
+.tl-name b { font-weight: 800; }
+.tl-body p { margin: 0; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+.tl-item.is-key .tl-body { background: var(--gradient); color: #fff; border-radius: 18px; padding: 16px 20px; margin: -6px 0; box-shadow: 0 16px 34px -18px rgba(83,49,117,.7); }
+.tl-item.is-key .tl-name, .tl-item.is-key .tl-body p { color: #fff; }
+.tl-item.is-key .tl-dot { background: var(--purple); border-color: #fff; box-shadow: 0 0 0 3px var(--purple); }
+/* line-up flows straight out of chapter 04 */
+.lineup-inline { margin: 26px 0 0 25px; padding-left: 30px; }
+.lu-eyebrow { margin-bottom: 14px; }
+.lineup-inline .lu-grid { gap: 18px; }
+.lineup-inline .lu-head { padding: 20px 24px 16px; }
+.lineup-inline .lu-list { padding: 6px 24px 18px; }
+.lineup-inline .lu-city { font-size: 1.4rem; }
+/* next step: cities */
+.pd-cities-sec { background: #fff; }
+.pd-share { text-align: center; margin-top: 26px; }
+.pd-share a { color: var(--purple-deep); font-weight: 700; }
+@media (max-width: 600px) {
+  .tl-phase { --tl-time: 54px; }
+  .tl-phase-intro { margin-left: 0; }
+  .tl-list { margin-left: 12px; }
+  .tl-item { gap: 12px; padding-left: 20px; }
+  .tl-time { font-size: .95rem; }
+  .tl-name { font-size: .95rem; }
+  .tl-body p { font-size: .94rem; }
+  .lineup-inline { margin-left: 0; padding-left: 0; }
+}
+/* PowerDAY v3.1: original schedule wording, big centred jump links */
+.page-hero .pd-jump-lg { justify-content: center; gap: 14px; margin: 34px auto 0; }
+.pd-jump-lg a { font-size: clamp(.95rem, 1.6vw, 1.15rem); padding: 16px 30px; border-width: 2px; letter-spacing: .1em; }
+.tl-phase { margin-top: 0; }
+.tl-list { margin-left: auto; margin-right: auto; max-width: 640px; }
+.tl-item { align-items: center; padding: 12px 0 12px 30px; }
+.tl-dot { top: 50%; transform: translateY(-50%); }
+.tl-body { display: block; }
+a.tl-name { text-decoration: none; color: var(--purple-ink); border-bottom: 2px solid var(--aqua-deep); }
+a.tl-name:hover { color: var(--purple); }
+.tl-item.is-key .tl-body { padding: 12px 18px; margin: 0; }
+.tl-item.is-key .tl-name { color: #fff; }
+.lineup-inline { max-width: 920px; margin: 48px auto 0; padding-left: 0; }
+.lu-eyebrow { text-align: center; }
+@media (max-width: 600px) { .pd-jump-lg a { padding: 13px 20px; } .tl-list { margin-left: 12px; } }
+
+/* ================= PowerDAY v4: switchable schedule + plain line-up ================= */
+.pd-switch { display: flex; width: max-content; max-width: 100%; margin: 0 auto 10px; }
+.pd-switch button { font-size: .9rem; padding: 14px 26px; }
+.swipe-hint { display: none; text-align: center; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: 4px 0 0; }
+@media (hover: none) and (pointer: coarse) { .swipe-hint { display: block; } }
+.pd-swipe { max-width: 760px; margin: 24px auto 0; touch-action: pan-y; }
+.pd-swipe.swipe-in-left > * { animation: pdInL .35s ease; }
+.pd-swipe.swipe-in-right > * { animation: pdInR .35s ease; }
+@keyframes pdInL { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes pdInR { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+.city-banner { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: center; border-radius: 26px; padding: 24px 28px; color: #fff; margin-bottom: 26px; box-shadow: 0 24px 50px -28px rgba(46,27,69,.6); }
+.city-banner[hidden] { display: none; }
+.cb-jhb { background: linear-gradient(120deg, var(--purple) 0%, var(--purple-deep) 100%); }
+.cb-cpt { background: linear-gradient(120deg, var(--aqua-deep) 0%, #2a9fbf 60%, var(--purple) 130%); }
+.city-banner .venue-mark { height: 64px; width: auto; max-width: 130px; object-fit: contain; }
+.cb-text p { margin: 0; }
+.cb-count { margin-bottom: 6px !important; }
+.cb-city { margin: 0; font-family: var(--f-head); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1; color: #fff; }
+.cb-date { font-family: var(--f-script); font-size: clamp(1.2rem, 2.2vw, 1.5rem); margin: 4px 0 6px !important; }
+.cb-venue { font-size: .92rem; opacity: .95; }
+.cb-ctas { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 14px; }
+.cb-ctas .link-arrow { color: #fff; }
+.pd-swipe .tl-list { max-width: none; }
+@media (max-width: 600px) { .city-banner { grid-template-columns: 1fr; padding: 22px; } .city-banner .venue-mark { height: 52px; } .pd-switch button { padding: 12px 16px; font-size: .78rem; } }
+/* line-up as plain lists on the page */
+.lp { background: var(--mist); }
+.lp .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+.lp-grid { display: grid; gap: 40px; grid-template-columns: 1fr; max-width: 980px; margin: 0 auto; }
+@media (min-width: 860px) { .lp-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+.lp-city { margin: 0; font-family: var(--f-head); font-weight: 700; text-transform: uppercase; font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--purple-deep); }
+.lp-cpt .lp-city { color: #1f8fa8; }
+.lp-date { margin: 2px 0 14px; font-family: var(--f-script); font-size: 1.35rem; color: var(--purple); }
+.lp-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--purple); }
+.lp-cpt .lp-list { border-top-color: var(--aqua-deep); }
+.lp-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid rgba(120,93,167,.18); }
+.lp-time { font-weight: 700; color: var(--ink-soft); }
+.lp-name { font-family: "Outfit", "Figtree", sans-serif; font-weight: 500; text-transform: uppercase; font-size: 1.05rem; color: var(--purple-ink); }
+.lp-row.is-head .lp-name { font-weight: 800; }
+.lp-kind { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--purple); }
+.lp-cpt .lp-kind { color: #1f8fa8; }
+@media (max-width: 600px) { .pd-switch { flex-direction: row; flex-wrap: nowrap; width: 100%; } .pd-switch button { flex: 1 1 50%; padding: 12px 8px; font-size: .7rem; letter-spacing: .06em; white-space: nowrap; } }
+/* PowerDAY tabs: the top tiles separate "The day" and "The line-up" */
+.pd-tabs a[aria-current="true"] { background: #fff; color: var(--purple-deep); border-color: #fff; }
+.pd-panel[hidden] { display: none; }
+.pd-tabs { scroll-margin-top: calc(var(--header-h) + 16px); }
+/* PowerDAY: after-party line-up rows (outlined pills under the after party) */
+.sched-row.is-act .sched-event { background: transparent; border: 2px solid var(--aqua); color: #fff; box-shadow: none; }
+.sched-row.is-act .sched-time { opacity: .9; }
+
+/* ---------- PowerDAY: PowerVOICES + PowerPERFORMERS ---------- */
+.faces { background: #fff; }
+.faces .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+.faces .city-switch-dark { margin: 18px auto 0; }
+.fc-grid { display: grid; gap: 22px; grid-template-columns: 1fr; max-width: 1080px; margin: 0 auto; }
+@media (min-width: 900px) { .fc-grid { grid-template-columns: 1fr 1fr; } }
+.fc-group { border-radius: 28px; padding: clamp(26px, 3.5vw, 40px); color: #fff; background: linear-gradient(135deg, var(--purple) 0%, var(--purple-deep) 100%); box-shadow: 0 26px 50px -30px rgba(46,27,69,.6); }
+.fc-group[hidden] { display: none; }
+.fc-voices { background: var(--gradient); }
+.fc-label { margin: 0; font-family: var(--f-head); font-weight: 700; text-transform: uppercase; font-size: clamp(1.4rem, 2.6vw, 1.9rem); letter-spacing: -.01em; }
+.fc-label b { font-weight: 800; }
+.fc-city { display: inline-block; vertical-align: middle; font-family: "Figtree", sans-serif; font-size: .75rem; font-weight: 800; letter-spacing: .12em; background: var(--aqua); color: var(--purple-ink); border-radius: 999px; padding: 5px 12px; margin-left: 6px; }
+.fc-sub { margin: 6px 0 18px; font-size: .95rem; opacity: .9; }
+.fc-pills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.fc-pill { font-family: "Outfit", "Figtree", sans-serif; font-weight: 600; text-transform: uppercase; font-size: .95rem; letter-spacing: .02em; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1.5px solid rgba(255,255,255,.45); }
+.fc-pill.is-main { background: #fff; color: var(--purple-deep); border-color: #fff; font-weight: 800; }
+.fc-label-sm { font-size: .8rem; font-family: "Figtree", sans-serif; font-weight: 800; letter-spacing: .14em; margin: 24px 0 12px; opacity: .9; }
+.fc-pills-sm .fc-pill { font-size: .82rem; padding: 8px 14px; }
+@media (max-width: 600px) { .faces .city-switch-dark { flex-direction: row; flex-wrap: nowrap; width: 100%; } .faces .city-switch-dark button { flex: 1 1 50%; padding: 12px 8px; font-size: .7rem; letter-spacing: .06em; white-space: nowrap; } }
+.sched-row.is-act.is-main .sched-event { background: #fff; border-color: #fff; color: var(--purple-deep); font-weight: 800; }
