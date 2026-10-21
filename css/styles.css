@@ -996,3 +996,28 @@ a.tl-name:hover { color: var(--purple); }
 .fc-pills-sm .fc-pill { font-size: .82rem; padding: 8px 14px; }
 @media (max-width: 600px) { .faces .city-switch-dark { flex-direction: row; flex-wrap: nowrap; width: 100%; } .faces .city-switch-dark button { flex: 1 1 50%; padding: 12px 8px; font-size: .7rem; letter-spacing: .06em; white-space: nowrap; } }
 .sched-row.is-act.is-main .sched-event { background: #fff; border-color: #fff; color: var(--purple-deep); font-weight: 800; }
+/* GLOWWA joins the affiliate tier (same turquoise as the other affiliates) */
+.pt-glowwa .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-glowwa .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+.pt-glowwa .ptile-logo { max-height: 46px; }
+.pt-glowwa .ptile-logo-sm { max-height: 30px; }
+@media (min-width: 1040px) { .ptile-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+/* Affiliate tiles: compact, consistent landscape shape (no stretching to fit the longest blurb) */
+.ptile-grid-3 .ptile { height: 300px; min-height: 0; }
+.ptile-grid-3 .ptile > div { padding: 28px 26px; gap: 22px; }
+.ptile-grid-3 .ptile-back { justify-content: flex-start; gap: 10px; padding-top: 58px !important; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.ptile-grid-3 .ptile-back p { font-size: .9rem; line-height: 1.5; }
+.ptile-grid-3 .ptile-line { font-size: 1.05rem !important; }
+.ptile-grid-3 .ptile-close { top: 10px; right: 10px; }
+@media (max-width: 1039px) { .ptile-grid-3 .ptile { height: 280px; } }
+/* open tile grows to fit its blurb; closed tiles keep the compact shape */
+.ptile-grid-3 { align-items: start; }
+.ptile-grid-3 .ptile.is-open { height: auto; min-height: 300px; }
+.ptile-grid-3 .ptile-back { overflow: visible; }
+/* Partner tiles: logo sits dead centre; Read more button anchored near the bottom */
+.ptile-front { position: relative; justify-content: center; }
+.ptile-front .ptile-btn { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); white-space: nowrap; }
+.ptile-front .ptile-logo { margin-bottom: 0; }
+.ptile-front .ptile-wordmark { margin-bottom: 0; }
+.ptile-grid-3 .ptile-front { position: absolute; inset: 0; }
+.ptile-grid-3 .ptile { position: relative; }
