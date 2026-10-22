@@ -1021,3 +1021,79 @@ a.tl-name:hover { color: var(--purple); }
 .ptile-front .ptile-wordmark { margin-bottom: 0; }
 .ptile-grid-3 .ptile-front { position: absolute; inset: 0; }
 .ptile-grid-3 .ptile { position: relative; }
+/* All partner tiles: compact closed shape; open tile grows to fit its blurb */
+.ptile-grid { align-items: start; }
+.ptile { position: relative; height: 280px; min-height: 0; }
+.ptile.is-open { height: auto; min-height: 280px; }
+.ptile-front { position: absolute; inset: 0; }
+.ptile-back { justify-content: flex-start; overflow: visible; }
+.ptile-grid-1 .ptile { height: 240px; }
+.ptile-grid-1 .ptile.is-open { height: auto; min-height: 240px; }
+.ptile-front .ptile-logo { max-height: 52px; }
+.ptile-front .ptile-logo.ptile-logo-tall { max-height: 74px; }
+@media (max-width: 600px) { .ptile { height: 240px; } .ptile.is-open { min-height: 240px; } }
+/* Hopnøsis joins the affiliates; four across on wide screens */
+.pt-hopnosis .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-hopnosis .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+.pt-hopnosis .ptile-logo { max-height: 56px; }
+.pt-hopnosis .ptile-logo-sm { max-height: 40px; }
+@media (min-width: 760px) { .ptile-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .ptile-grid-4 { grid-template-columns: repeat(4, 1fr); } .ptile-grid-4 .ptile-front .ptile-logo { max-width: 190px; } }
+
+/* ================= PowerPARTNERS v2: aligned logos + playful shapes ================= */
+/* Alignment: every logo sits in the same-height box, button right under it, group centred */
+.ptile-front { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+.ptile-front .ptile-btn { position: static; transform: none; }
+.ptile-front .ptile-logo { height: 58px; max-height: none; width: auto; max-width: 78%; object-fit: contain; }
+.ptile-front .ptile-logo.ptile-logo-tall { height: 70px; }
+.ptile { transition: border-radius .45s cubic-bezier(.2,.7,.2,1), box-shadow .3s, transform .3s; }
+.ptile:not(.is-open):hover { transform: translateY(-4px); }
+
+/* Presented by: a wide capsule */
+.ptile-grid-1 .ptile:not(.is-open) { border-radius: 999px; }
+.ptile-grid-1 .ptile.is-open { border-radius: 40px; }
+
+/* Title partners: arches */
+.ptile-grid-title .ptile:not(.is-open) { border-radius: 220px 220px 28px 28px; height: 320px; }
+.ptile-grid-title .ptile-front { padding-top: 60px; }
+
+/* Affiliates: circles that open into cards */
+.ptile-grid-4 .ptile:not(.is-open) { height: auto; aspect-ratio: 1; border-radius: 50%; max-width: 280px; width: 100%; justify-self: center; }
+.ptile-grid-4 .ptile.is-open { border-radius: 32px; }
+.ptile-grid-4 .ptile-front .ptile-logo { height: 44px; max-width: 64%; }
+.ptile-grid-4 .ptile-front { gap: 18px; }
+.ptile-grid-4 .ptile-front .ptile-btn { padding: 11px 20px; font-size: .74rem; }
+
+/* PowerCREATORS: soft organic blobs */
+.ptile-grid-creators .ptile:not(.is-open) { border-radius: 62% 38% 55% 45% / 48% 58% 42% 52%; height: 300px; }
+.ptile-grid-creators .ptile:nth-child(2):not(.is-open) { border-radius: 40% 60% 42% 58% / 56% 44% 58% 44%; }
+.ptile-grid-creators .ptile.is-open { border-radius: 36px; }
+
+/* decorative PowerHER shapes floating behind each tier */
+.partner-tier { position: relative; overflow: hidden; isolation: isolate; }
+.partner-tier::before, .partner-tier::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; }
+.partner-tier::before { width: 340px; height: 340px; left: -120px; top: 40px; background: radial-gradient(circle, rgba(108,204,222,.35) 0%, rgba(108,204,222,0) 70%); }
+.partner-tier::after { width: 260px; height: 260px; right: -80px; bottom: -60px; border: 2px dashed rgba(120,93,167,.28); }
+.partner-tier:nth-of-type(odd)::before { left: auto; right: -120px; background: radial-gradient(circle, rgba(120,93,167,.25) 0%, rgba(120,93,167,0) 70%); }
+.partner-tier:nth-of-type(odd)::after { right: auto; left: -70px; border-color: rgba(51,196,216,.35); }
+
+@media (max-width: 600px) {
+  .ptile-grid-1 .ptile:not(.is-open) { border-radius: 120px; }
+  .ptile-grid-title .ptile:not(.is-open) { border-radius: 160px 160px 24px 24px; height: 280px; }
+  .ptile-grid-4 .ptile:not(.is-open) { max-width: 260px; }
+}
+.pt-motherkind .ptile-front .ptile-logo { height: 30px; } .pt-glow .ptile-front .ptile-logo { height: 66px; }
+@media (max-width: 759px) {
+  .ptile-grid-4 { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ptile-grid-4 .ptile:not(.is-open) { max-width: 170px; }
+  .ptile-grid-4 .ptile.is-open { grid-column: 1 / -1; }
+  .ptile-grid-4 .ptile-front .ptile-logo { height: 28px; max-width: 70%; }
+  .ptile-grid-4 .ptile-front { gap: 12px; }
+  .ptile-grid-4 .ptile-front .ptile-btn { padding: 8px 12px; font-size: .62rem; letter-spacing: .1em; }
+}
+/* PowerCREATORS: arches like the title partners */
+.ptile-grid-creators .ptile:not(.is-open), .ptile-grid-creators .ptile:nth-child(2):not(.is-open) { border-radius: 220px 220px 28px 28px; height: 320px; }
+.ptile-grid-creators .ptile-front { padding-top: 60px; }
+@media (max-width: 600px) { .ptile-grid-creators .ptile:not(.is-open), .ptile-grid-creators .ptile:nth-child(2):not(.is-open) { border-radius: 160px 160px 24px 24px; height: 280px; } }
+/* no colour blush in the section backgrounds */
+.partner-tier::before { content: none; }
