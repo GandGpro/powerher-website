@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=57">
+  <link rel="stylesheet" href="css/styles.css?v=62">
 </head>
 <body data-page="experience">
   <div data-ph="header"></div>
@@ -36,110 +36,44 @@
       </div>
       <div class="wrap">
         <h1 class="page-title logo-type">Power<b>DAY</b></h1>
-        <div class="city-switch" data-city-switch role="group" aria-label="Choose your city">
-          <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
-          <button type="button" data-city="cpt" aria-pressed="false">Cape Town • 14 Nov</button>
-        </div>
-        <p class="city-now">
-          <strong data-city-text="dateLabel">Saturday, 7 November 2026</strong> •
-          <span data-city-text="venue">The Chosen Convention &amp; Expo Centre</span> •
-          <span class="num" data-bind="hours">11:00 – 21:00</span> • 18+
-        </p>
+        <p class="page-intro pd2-intro">Johannesburg • Saturday, 7 November &nbsp;|&nbsp; Cape Town • Saturday, 14 November</p>
       </div>
     </section>
 
-    <!-- ============ YOUR POWERDAY: one block per city (switch shows one at a time) ============ -->
-    <section class="section powerday" id="schedule">
+    <!-- ============ YOUR POWERDAY: official schedule artwork, split per city ============ -->
+    <section class="section pdx" id="schedule">
       <div class="wrap">
         <div class="section-head center-head reveal">
-          <p class="eyebrow">Your Power<b>DAY</b></p>
+          <p class="eyebrow">Your Power<b>DAY</b> • <span class="num" data-bind="hours">11:00 – 21:00</span></p>
           <h2 class="display">Pick your city, <span class="script">plan your day</span></h2>
-          <div class="city-switch city-switch-dark" data-city-switch role="group" aria-label="Choose your city">
-            <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
-            <button type="button" data-city="cpt" aria-pressed="false">Cape Town • 14 Nov</button>
-          </div>
         </div>
-
-        <div class="pd-city" data-city-only="jhb">
-          <article class="pd-card pd-jhb">
-            <img class="pd-kayla" src="assets/img/kayla-cutout-2.webp" width="900" height="2085" alt="" loading="lazy">
-            <div class="pd-card-body">
-              <span class="sched-count" data-countdown="jhb"></span>
-              <h3 class="pd-name">Johannesburg</h3>
-              <p class="pd-date">Saturday, 7 November 2026</p>
-              <div class="venue-row pd-venue"><img class="venue-mark" src="assets/img/venue-chosen-white.webp" width="414" height="200" alt="" loading="lazy"><span><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South</span></div>
-              <p class="pd-hours"><span class="num" data-bind="hours">11:00 – 21:00</span> • 18+</p>
-              <div class="pd-ctas">
-                <a class="btn btn-light" data-ticket="jhb">Get JHB tickets</a>
-                <a class="link-arrow" href="https://maps.google.com/?q=The+Chosen+Convention+%26+Expo+Centre+23+Summit+Dr+Rispark" target="_blank" rel="noopener">Directions</a>
-              </div>
+        <div class="pdx-grid">
+          <article class="pdx-col reveal">
+            <span class="pdx-count"><span class="sched-count" data-countdown="jhb"></span></span>
+            <header class="pdx-head">
+              <h3 class="pdx-city">Johannesburg</h3>
+              <p class="pdx-date">Saturday, 7 November 2026</p>
+              <div class="pdx-venue"><img class="pdx-venue-logo" src="assets/img/venue-chosen-purple.webp" width="414" height="200" alt="" loading="lazy"><span><strong>The Chosen Convention &amp; Expo Centre</strong><br>23 Summit Dr, Rispark, Johannesburg South<br><a class="pdx-dir" href="https://maps.google.com/?q=The+Chosen+Convention+%26+Expo+Centre+23+Summit+Dr+Rispark" target="_blank" rel="noopener">Get directions</a></span></div>
+            </header>
+            <a class="pdx-zoom" href="assets/img/schedule-jhb-1400.webp" target="_blank" rel="noopener" aria-label="Open the full-size schedule"><img class="pdx-art" src="assets/img/schedule-jhb-1400.webp" srcset="assets/img/schedule-jhb-800.webp 800w, assets/img/schedule-jhb-1400.webp 1400w" sizes="(min-width: 1000px) 700px, 100vw" width="1400" height="1755" alt="Your JHB PowerDAY schedule, Saturday, 7 November 2026" loading="lazy"></a>
+            <p class="pdx-hint">Tap the schedule to see it full size</p>
+            <div class="pdx-ctas">
+              <a class="btn btn-primary" data-ticket="jhb">Get JHB tickets</a>
             </div>
           </article>
-          <div class="sched-panel">
-            <h3 class="sched-title">Your Power<b>DAY</b> <span class="sched-city-tag">JHB</span></h3>
-            <p class="sched-note">Saturday, 7 November 2026 • The Chosen Convention &amp; Expo Centre</p>
-            <div class="sched-head" aria-hidden="true"><span>Time</span><span>Event schedule</span></div>
-            <ol class="sched-list">
-              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Doors open &amp; registration</span></li>
-              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Explore the Power<b>PARTNER</b> experiences</span></li>
-              <li class="sched-row"><span class="sched-time num">13:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">The Health of Your Wealth | Investec</span></li>
-              <li class="sched-row"><span class="sched-time num">13:30</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Breathwork</span></li>
-              <li class="sched-row"><span class="sched-time num">14:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pillars of PowerHER</span></li>
-              <li class="sched-row"><span class="sched-time num">14:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pulse Talks ft. Power<b>VOICES</b></span></li>
-              <li class="sched-row"><span class="sched-time num">15:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Refuel, connect &amp; explore</span></li>
-              <li class="sched-row"><span class="sched-time num">15:45</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Dance warm-up</span></li>
-              <li class="sched-row is-key"><span class="sched-time num">16:15</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla Itsines bootcamp</span></li>
-              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla meet &amp; greet</span></li>
-              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">After party ft. Power<b>PERFORMERS</b></span></li>
-              <li class="sched-row is-act"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayzia</span></li>
-              <li class="sched-row is-act is-main"><span class="sched-time num">17:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Lady Zamar</span></li>
-              <li class="sched-row is-act is-main"><span class="sched-time num">18:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Ayanda MVP</span></li>
-              <li class="sched-row is-act"><span class="sched-time num">19:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Indigo</span></li>
-              <li class="sched-row is-act"><span class="sched-time num">20:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Lady Lea</span></li>
-              <li class="sched-row"><span class="sched-time num">21:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">End</span></li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="pd-city" data-city-only="cpt" hidden>
-          <article class="pd-card pd-cpt">
-            <img class="pd-kayla" src="assets/img/kayla-cutout.webp" width="1100" height="2314" alt="" loading="lazy">
-            <div class="pd-card-body">
-              <span class="sched-count" data-countdown="cpt"></span>
-              <h3 class="pd-name">Cape Town</h3>
-              <p class="pd-date">Saturday, 14 November 2026</p>
-              <div class="venue-row pd-venue"><img class="venue-mark" src="assets/img/venue-allee-bleue-white.webp" width="236" height="200" alt="" loading="lazy"><span><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek</span></div>
-              <p class="pd-hours"><span class="num" data-bind="hours">11:00 – 21:00</span> • 18+</p>
-              <div class="pd-ctas">
-                <a class="btn btn-light" data-ticket="cpt">Get CPT tickets</a>
-                <a class="link-arrow" href="https://maps.google.com/?q=Allee+Bleue+Wine+Estate+Franschhoek" target="_blank" rel="noopener">Directions</a>
-              </div>
+          <article class="pdx-col reveal">
+            <span class="pdx-count"><span class="sched-count" data-countdown="cpt"></span></span>
+            <header class="pdx-head">
+              <h3 class="pdx-city">Cape Town</h3>
+              <p class="pdx-date">Saturday, 14 November 2026</p>
+              <div class="pdx-venue"><img class="pdx-venue-logo" src="assets/img/venue-allee-bleue-purple.webp" width="236" height="200" alt="" loading="lazy"><span><strong>Allée Bleue Wine Estate</strong><br>Cnr R45 &amp; R310, Groot Drakenstein, Franschhoek<br><a class="pdx-dir" href="https://maps.google.com/?q=Allee+Bleue+Wine+Estate+Franschhoek" target="_blank" rel="noopener">Get directions</a></span></div>
+            </header>
+            <a class="pdx-zoom" href="assets/img/schedule-cpt-1400.webp" target="_blank" rel="noopener" aria-label="Open the full-size schedule"><img class="pdx-art" src="assets/img/schedule-cpt-1400.webp" srcset="assets/img/schedule-cpt-800.webp 800w, assets/img/schedule-cpt-1400.webp 1400w" sizes="(min-width: 1000px) 700px, 100vw" width="1400" height="1755" alt="Your CPT PowerDAY schedule, Saturday, 14 November 2026" loading="lazy"></a>
+            <p class="pdx-hint">Tap the schedule to see it full size</p>
+            <div class="pdx-ctas">
+              <a class="btn btn-primary" data-ticket="cpt">Get CPT tickets</a>
             </div>
           </article>
-          <div class="sched-panel">
-            <h3 class="sched-title">Your Power<b>DAY</b> <span class="sched-city-tag">CPT</span></h3>
-            <p class="sched-note">Saturday, 14 November 2026 • Allée Bleue Wine Estate</p>
-            <div class="sched-head" aria-hidden="true"><span>Time</span><span>Event schedule</span></div>
-            <ol class="sched-list">
-              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Doors open &amp; registration</span></li>
-              <li class="sched-row"><span class="sched-time num">11:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Explore the Power<b>PARTNER</b> experiences</span></li>
-              <li class="sched-row"><span class="sched-time num">13:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">The Health of Your Wealth | Investec</span></li>
-              <li class="sched-row"><span class="sched-time num">13:30</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Breathwork</span></li>
-              <li class="sched-row"><span class="sched-time num">14:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pillars of PowerHER</span></li>
-              <li class="sched-row"><span class="sched-time num">14:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Pulse Talks ft. Power<b>VOICES</b></span></li>
-              <li class="sched-row"><span class="sched-time num">15:10</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Refuel, connect &amp; explore</span></li>
-              <li class="sched-row"><span class="sched-time num">15:45</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Dance warm-up</span></li>
-              <li class="sched-row is-key"><span class="sched-time num">16:15</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla Itsines bootcamp</span></li>
-              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayla meet &amp; greet</span></li>
-              <li class="sched-row"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">After party ft. Power<b>PERFORMERS</b></span></li>
-              <li class="sched-row is-act"><span class="sched-time num">17:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Kayzia</span></li>
-              <li class="sched-row is-act is-main"><span class="sched-time num">17:40</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Lady Zamar</span></li>
-              <li class="sched-row is-act"><span class="sched-time num">18:20</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Amy Jones</span></li>
-              <li class="sched-row is-act"><span class="sched-time num">19:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Tinkz</span></li>
-              <li class="sched-row is-act"><span class="sched-time num">20:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">Mia</span></li>
-              <li class="sched-row"><span class="sched-time num">21:00</span><span class="sched-line" aria-hidden="true"></span><span class="sched-event">End</span></li>
-            </ol>
-          </div>
         </div>
       </div>
     </section>
@@ -158,8 +92,8 @@
         <div class="fc-grid">
           <div class="fc-group fc-voices reveal">
             <p class="fc-label">Power<b>VOICES</b></p>
-            <p class="fc-sub">Pulse Talks from 14:20 • Both cities</p>
-            <ul class="fc-pills"><li class="fc-pill">Savannah Cozzi</li><li class="fc-pill">Elizabeth Fick</li><li class="fc-pill">Uleen Fourie</li><li class="fc-pill">Tarryn Louch</li><li class="fc-pill">Rechelle</li><li class="fc-pill">Michaela Botmas</li></ul>
+            <p class="fc-sub">Pulse Talk 13:30 &amp; Investec talk 14:20 • Both cities</p>
+            <ul class="fc-pills"><li class="fc-pill">Rechelle Kloeck</li><li class="fc-pill">Savannah Cozzi</li><li class="fc-pill">Taryn Louch</li><li class="fc-pill">Uleen Fourie</li><li class="fc-pill">Elizabeth Fick</li><li class="fc-pill">Tracey Ward</li></ul>
           </div>
           <div class="fc-group" data-city-only="jhb">
             <p class="fc-label">Power<b>PERFORMERS</b> <span class="fc-city">Johannesburg</span></p>
@@ -196,7 +130,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=57"></script>
-  <script src="js/layout.js?v=57"></script>
+  <script src="js/config.js?v=62"></script>
+  <script src="js/layout.js?v=62"></script>
 </body>
 </html>
