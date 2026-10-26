@@ -1243,3 +1243,39 @@ a.tl-name:hover { color: var(--purple); }
 @media (max-width: 600px) { .lw-name { font-size: .92rem; } }
 .lw-num { font-family: var(--f-body); font-weight: 800; letter-spacing: .04em; }
 @media (max-width: 600px) { .ptile-static .lw-name { font-size: 1rem; } .pdx-venue-logo { height: 50px; } }
+/* v6.3: Home ticket buttons + PowerPERKS heading on the tickets page */
+.tickets-teaser .city-switch { margin-top: 18px; }
+.tickets-teaser .ticket .btn-block { margin-top: 1.6rem; }
+.perks-head { padding: clamp(56px, 7vw, 88px) 0 clamp(28px, 4vw, 44px); background: var(--mist); }
+.perks-head .display b { font-weight: inherit; color: var(--purple); }
+.perks-intro { max-width: 46ch; margin: 14px 0 0; color: var(--ink-soft); font-size: 1.05rem; }
+/* v6.4: PowerPERKS as one section, two colour tiles side by side */
+.perks { background: linear-gradient(180deg, var(--mist) 0%, #fff 100%); }
+.perks .section-head { margin-bottom: clamp(28px, 4vw, 44px); }
+.perks .display b { font-weight: inherit; color: var(--purple); }
+.perks .perks-intro { max-width: 46ch; margin: 14px auto 0; color: var(--ink-soft); font-size: 1.05rem; }
+.perk-grid { display: grid; gap: 24px; grid-template-columns: 1fr; max-width: 1180px; margin: 0 auto; }
+@media (min-width: 900px) { .perk-grid { grid-template-columns: 1fr 1fr; } }
+.perk-tile { position: relative; overflow: hidden; display: flex; flex-direction: column; color: #fff; border-radius: 36px; padding: clamp(28px, 3.4vw, 44px); box-shadow: 0 40px 80px -46px rgba(46,27,69,.6); scroll-margin-top: 110px; }
+.perk-tile > * { position: relative; }
+.perk-investec { background: #000; }
+.perk-investec::before { content: ""; position: absolute; width: 360px; height: 360px; right: -120px; top: -140px; border-radius: 50%; background: radial-gradient(circle, rgba(108,204,222,.28) 0%, rgba(108,204,222,0) 70%); }
+.perk-dischem { background: linear-gradient(135deg, #3fb4cf 0%, #2b8fbf 55%, #4a5fae 100%); }
+.perk-dischem::before { content: ""; position: absolute; width: 360px; height: 360px; right: -120px; top: -140px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 70%); }
+.perk-tile-head { padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.2); }
+.perk-tile-logo { height: 30px; width: auto; margin-bottom: 14px; }
+.perk-tile-logo-dc { height: 40px; }
+.perk-tile-line { font-family: var(--f-head); font-weight: 700; text-transform: uppercase; font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.05; margin: 0; color: #fff; }
+.perk-tile-for { font-family: var(--f-head); font-weight: 700; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--aqua); margin: 0 0 .5rem; }
+.perk-dischem .perk-tile-for { color: #fff; opacity: .85; }
+.perk-tile .perk-big { font-size: clamp(2.2rem, 3.6vw, 2.8rem); }
+.perk-tile .perk-prices div { background: rgba(255,255,255,.1); }
+.perk-dischem .steps li::before { background: #fff; color: #2b8fbf; }
+.perk-tile .btn-row { margin-top: auto; padding-top: 8px; }
+@media (max-width: 600px) { .perk-tile { border-radius: 26px; } .perk-tile .btn-row .btn { flex: 1 1 100%; } }
+.perks .section-head { text-align: center; margin-left: auto; margin-right: auto; }
+.perk-tile-head { min-height: 128px; display: flex; flex-direction: column; justify-content: flex-end; }
+.perk-tile .btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+@media (min-width: 900px) { .perk-tile .btn-row .btn { flex: 1 1 0; padding-left: 1em; padding-right: 1em; white-space: nowrap; } }
+.perk-tile-head .perk-tile-logo { align-self: flex-start; width: auto; max-width: 70%; object-fit: contain; }
+@media (min-width: 900px) { .perk-tile-head { min-height: 150px; } }
