@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=62">
+  <link rel="stylesheet" href="css/styles.css?v=64">
 </head>
 <body data-page="tickets">
   <div data-ph="header"></div>
@@ -104,62 +104,64 @@
       </div>
     </section>
 
-    <!-- ============ INVESTEC POWERPERK ============ -->
-    <section class="investec" id="investec">
-      <div class="wrap investec-grid reveal">
-        <div>
-          <img class="investec-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
-          <h2 class="investec-line">The Health of Your&nbsp;Wealth.</h2>
-          <p class="investec-sub">Powered by Investec.</p>
+    <!-- ============ POWERPERKS: Investec + Dis-Chem, side by side ============ -->
+    <section class="section perks" id="perks">
+      <div class="wrap">
+        <div class="section-head center-head reveal">
+          <p class="eyebrow">From our Title Partners</p>
+          <h2 class="display">Power<b>PERKS</b></h2>
+          <p class="perks-intro">Bank with Investec or shop with Dis-Chem? You’ve unlocked a little something extra on your PowerTICKET.</p>
         </div>
-        <div class="perk">
-          <p class="eyebrow">Power<b>PERK</b> for Investec clients</p>
-          <p class="perk-big">Save 25%</p>
-          <p>Investec Private Banking clients unlock PowerTICKETS with a unique access code.</p>
-          <dl class="perk-prices">
-            <div><dt>General</dt><dd data-bind="investec.general">R667.50</dd></div>
-            <div><dt>VVIP</dt><dd data-bind="investec.vvip">R2,842.50</dd></div>
-          </dl>
-          <ol class="steps">
-            <li>Have your unique Investec access code ready.</li>
-            <li>Open the Howler page for your city.</li>
-            <li>Enter your code to unlock the Investec General and VVIP tickets.</li>
-          </ol>
-          <div class="btn-row">
-            <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
-            <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
-          </div>
+        <div class="perk-grid">
+          <article class="perk-tile perk-investec reveal" id="investec">
+            <header class="perk-tile-head">
+              <img class="perk-tile-logo" src="assets/img/partner-investec-white.webp" width="700" height="139" alt="Investec" loading="lazy">
+              <h3 class="perk-tile-line">The Health of Your&nbsp;Wealth.</h3>
+            </header>
+            <p class="perk-tile-for">For Investec Private Banking clients</p>
+            <p class="perk-big">Save 25%</p>
+            <p>Investec Private Banking clients get 25% off General and VVIP PowerTICKETS with a unique access code.</p>
+            <dl class="perk-prices">
+              <div><dt>General</dt><dd data-bind="investec.general">R667.50</dd></div>
+              <div><dt>VVIP</dt><dd data-bind="investec.vvip">R2,842.50</dd></div>
+            </dl>
+            <ol class="steps">
+              <li>Have your unique Investec access code ready.</li>
+              <li>Open the Howler page for your city.</li>
+              <li>Enter your code to unlock your Investec General or VVIP PowerTICKET.</li>
+            </ol>
+            <div class="btn-row">
+              <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
+              <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
+            </div>
+          </article>
+
+          <article class="perk-tile perk-dischem reveal" id="dischem">
+            <header class="perk-tile-head">
+              <img class="perk-tile-logo perk-tile-logo-dc" src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="Dis-Chem" loading="lazy">
+              <h3 class="perk-tile-line">Better health starts&nbsp;here.</h3>
+            </header>
+            <p class="perk-tile-for">For Dis-Chem Better Rewards members</p>
+            <p class="perk-big">Save 10%</p>
+            <p>Dis-Chem Better Rewards members get 10% off General PowerTICKETS with a Dis-Chem discount code.</p>
+            <dl class="perk-prices">
+              <div><dt>General</dt><dd>10% off</dd></div>
+              <div><dt>Your code</dt><dd>At checkout</dd></div>
+            </dl>
+            <ol class="steps">
+              <li>Have your Dis-Chem discount code ready.</li>
+              <li>Open the Howler page for your city and choose General.</li>
+              <li>Enter your code on the payment page to unlock your 10% discount.</li>
+            </ol>
+            <div class="btn-row">
+              <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
+              <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ DIS-CHEM POWERPERK ============ -->
-    <section class="investec dischem" id="dischem">
-      <div class="wrap investec-grid reveal">
-        <div>
-          <img class="investec-logo dischem-logo" src="assets/img/partner-dischem-white.webp" width="700" height="180" alt="Dis-Chem" loading="lazy">
-          <h2 class="investec-line">Better health starts&nbsp;here.</h2>
-          <p class="investec-sub">A PowerPERK for Dis-Chem Better Rewards members.</p>
-        </div>
-        <div class="perk">
-          <p class="eyebrow">Power<b>PERK</b> for Dis-Chem Better Rewards members</p>
-          <p class="perk-big">Save 10%</p>
-          <p>Enjoy 10% off General PowerTICKETS.</p>
-          <ol class="steps">
-            <li>Head to the Howler ticket page for your city.</li>
-            <li>Choose your General PowerTICKET.</li>
-            <li>Continue through the purchase journey.</li>
-            <li>On the payment page, enter your Dis-Chem discount code to apply your 10% discount.</li>
-          </ol>
-          <div class="btn-row">
-            <a class="btn btn-light" data-ticket="jhb">Johannesburg tickets</a>
-            <a class="btn btn-outline-light" data-ticket="cpt">Cape Town tickets</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GOOD TO KNOW ============ -->
     <section class="section mist-bg" id="good-to-know">
       <div class="wrap">
         <div class="section-head reveal">

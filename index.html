@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=62">
+  <link rel="stylesheet" href="css/styles.css?v=63">
   <script type="application/ld+json">
   [{"@context":"https://schema.org","@type":"Event","name":"PowerHER Fit Fest Johannesburg","startDate":"2026-11-07T11:00:00+02:00","endDate":"2026-11-07T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"The Chosen Convention & Expo Centre","address":"23 Summit Dr, Rispark, Johannesburg South, 2053"},"image":"https://powerherfitfest.com/assets/img/og-image.jpg","performer":{"@type":"Person","name":"Kayla Itsines"},"offers":{"@type":"Offer","url":"https://powerher.howler.co.za/events/powerher-fit-fest-jhb-7-nov-2026-5a9d","priceCurrency":"ZAR","price":"890"}},
    {"@context":"https://schema.org","@type":"Event","name":"PowerHER Fit Fest Cape Town","startDate":"2026-11-14T11:00:00+02:00","endDate":"2026-11-14T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Allée Bleue Wine Estate","address":"Cnr R45 & R310, Groot Drakenstein, Franschhoek, 7680"},"image":"https://powerherfitfest.com/assets/img/og-image.jpg","performer":{"@type":"Person","name":"Kayla Itsines"},"offers":{"@type":"Offer","url":"https://powerher.howler.co.za/events/powerher-fit-fest-cpt-14-nov-2026-fde2","priceCurrency":"ZAR","price":"890"}}]
@@ -146,6 +146,10 @@
         <div class="section-head reveal">
           <p class="eyebrow">Power<b>TICKETS</b></p>
           <h2 class="display">Choose your PowerTICKET</h2>
+          <div class="city-switch city-switch-dark" data-city-switch role="group" aria-label="Choose your city">
+            <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
+            <button type="button" data-city="cpt" aria-pressed="false">Cape Town • 14 Nov</button>
+          </div>
         </div>
         <div class="ticket-grid">
           <article class="ticket reveal">
@@ -161,6 +165,7 @@
               <li>PowerHER After Party</li>
               <li>3-month Sweat app subscription</li>
             </ul>
+            <a class="btn btn-primary btn-block" data-ticket="active" href="#">Get General: <span data-city-text="short">JHB</span></a>
           </article>
 
           <article class="ticket ticket-vvip reveal">
@@ -178,6 +183,7 @@
               <li>Complimentary massages</li>
               <li>Everything in General</li>
             </ul>
+            <a class="btn btn-light btn-block" data-ticket="active" href="#">Get VVIP: <span data-city-text="short">JHB</span></a>
           </article>
         </div>
         <div class="center reveal"><a class="btn btn-ghost" href="tickets.html">See PowerTICKET details</a></div>
