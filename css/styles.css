@@ -1279,3 +1279,19 @@ a.tl-name:hover { color: var(--purple); }
 @media (min-width: 900px) { .perk-tile .btn-row .btn { flex: 1 1 0; padding-left: 1em; padding-right: 1em; white-space: nowrap; } }
 .perk-tile-head .perk-tile-logo { align-self: flex-start; width: auto; max-width: 70%; object-fit: contain; }
 @media (min-width: 900px) { .perk-tile-head { min-height: 150px; } }
+/* v6.5: Popsicle Nails flip tile (affiliate circles) */
+.pt-popsicle .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+.pt-popsicle .ptile-logo { max-width: 62%; }
+.pt-popsicle .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-popsicle .ptile-logo { max-height: 42px; width: auto; }
+.pt-popsicle .ptile-logo-sm { max-height: 40px; width: auto; }
+/* v6.6: Official Partners tier (Popsicle Nails): one mid-size capsule */
+.ptile-grid-official { grid-template-columns: 1fr !important; max-width: 520px; margin: 0 auto; }
+.ptile-grid-official .ptile { min-height: 0; height: 200px; }
+.ptile-grid-official .ptile:not(.is-open) { border-radius: 999px; }
+.ptile-grid-official .ptile.is-open { height: auto; min-height: 200px; border-radius: 36px; }
+.ptile-grid-official .ptile-front { background: linear-gradient(120deg, var(--purple) 0%, var(--aqua-deep) 100%); gap: 18px; }
+.ptile-grid-official .ptile-logo { max-height: 50px; width: auto; }
+.ptile-grid-official .ptile-back { background: #f1ecf8; color: var(--purple-ink); padding: 64px 32px 32px !important; }
+.ptile-grid-official .ptile-back p { font-size: .95rem; line-height: 1.55; }
+@media (max-width: 600px) { .ptile-grid-official .ptile { height: 170px; } .ptile-grid-official .ptile-logo { max-height: 40px; } .ptile-grid-official .ptile-back { padding: 58px 22px 26px !important; } }
