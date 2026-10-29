@@ -1295,3 +1295,10 @@ a.tl-name:hover { color: var(--purple); }
 .ptile-grid-official .ptile-back { background: #f1ecf8; color: var(--purple-ink); padding: 64px 32px 32px !important; }
 .ptile-grid-official .ptile-back p { font-size: .95rem; line-height: 1.55; }
 @media (max-width: 600px) { .ptile-grid-official .ptile { height: 170px; } .ptile-grid-official .ptile-logo { max-height: 40px; } .ptile-grid-official .ptile-back { padding: 58px 22px 26px !important; } }
+/* v6.7: Stitch flip tile (affiliate circles) */
+.pt-stitch .ptile-front { background: linear-gradient(135deg, var(--aqua-deep) 0%, #2a9fbf 100%); }
+.pt-stitch .ptile-back { background: #e8f7fa; color: var(--purple-ink); }
+.pt-stitch .ptile-logo { max-height: 34px; width: auto; max-width: 62%; }
+.pt-stitch .ptile-logo-sm { max-height: 30px; width: auto; }
+.pt-stitch .ptile-back a { color: var(--purple); font-weight: 700; }
+.pt-stitch .ptile-logo { max-height: 42px; max-width: 72%; }
