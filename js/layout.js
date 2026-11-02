@@ -8,7 +8,7 @@
     { id: "home", href: "index.html", label: "Home" },
     { id: "tickets", href: "tickets.html", label: "Power<b>TICKETS</b>" },
     { id: "experience", href: "experience.html", label: "Power<b>DAY</b>" },
-    { id: "lineup", href: "lineup.html", label: "Power<b>VOICES</b>" },
+    { id: "lineup", href: "lineup.html", label: "Power<b>LINE-UP</b>" },
     { id: "partners", href: "partners.html", label: "Power<b>PARTNERS</b>" },
     { id: "creators", href: "creators.html", label: "Power<b>CREATORS</b>" },
     { id: "legacy", href: "legacy.html", label: "Power<b>LEGACY</b>" },
