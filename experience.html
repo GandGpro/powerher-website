@@ -21,6 +21,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=62">
+  <style>
+    /* PowerDAY: one section per city, schedule beside the details on bigger screens */
+    #schedule { padding-bottom: 0; background: #fff; }
+    .pdx-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+    .pdx-jump a { font-family: var(--f-head); font-weight: 700; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--purple-deep); text-decoration: none; padding: .95em 1.4em; border-radius: 999px; border: 1px solid rgba(120,93,167,.3); background: #fff; }
+    .pdx-jump a:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+    .pdx-sec { scroll-margin-top: 90px; }
+    .hero-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .hero-jump a { font-family: var(--f-head); font-weight: 700; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #fff; text-decoration: none; padding: .95em 1.4em; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35); }
+    .hero-jump a:hover { background: #fff; color: var(--purple-deep); }
+    .pdx-alt { background: linear-gradient(180deg, #eef6f9 0%, #fff 100%); }
+    .pdx-wide { max-width: 1180px; margin: 0 auto; }
+    .pdx-wide .pdx-ctas { flex-direction: column; align-items: center; gap: 14px; }
+    @media (min-width: 960px) {
+      .pdx-wide { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); grid-template-areas: "head art" "ctas art" "hint art"; column-gap: 48px; align-items: center; padding: 56px 48px 48px; }
+      .pdx-wide .pdx-head { grid-area: head; align-self: end; border-bottom: 0; margin-bottom: 0; }
+      .pdx-wide .pdx-ctas { grid-area: ctas; align-self: start; margin-top: 8px; }
+      .pdx-wide .pdx-zoom { grid-area: art; }
+      .pdx-wide .pdx-hint { grid-area: hint; }
+      .pdx-wide .pdx-city { font-size: clamp(2.2rem, 3.6vw, 3rem); }
+      .pdx-wide .pdx-venue { flex-direction: column; text-align: center; }
+      .pdx-wide .pdx-venue-logo { border-right: 0; padding-right: 0; height: 72px; }
+      .pdx-alt .pdx-wide { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); grid-template-areas: "art head" "art ctas" "art hint"; }
+    }
+  </style>
 </head>
 <body data-page="experience">
   <div data-ph="header"></div>
@@ -36,7 +61,11 @@
       </div>
       <div class="wrap">
         <h1 class="page-title logo-type">Power<b>DAY</b></h1>
-        <p class="page-intro pd2-intro">Johannesburg • Saturday, 7 November &nbsp;|&nbsp; Cape Town • Saturday, 14 November</p>
+        <p class="page-intro pd2-intro">Your day, hour by hour, city by city.</p>
+        <nav class="hero-jump" aria-label="Jump to a city">
+          <a href="#jhb">Johannesburg • 7 Nov</a>
+          <a href="#cpt">Cape Town • 14 Nov</a>
+        </nav>
       </div>
     </section>
 
@@ -47,8 +76,13 @@
           <p class="eyebrow">Your Power<b>DAY</b> • <span class="num" data-bind="hours">11:00 – 21:00</span></p>
           <h2 class="display">Pick your city, <span class="script">plan your day</span></h2>
         </div>
-        <div class="pdx-grid">
-          <article class="pdx-col reveal">
+      </div>
+    </section>
+
+    <!-- ============ JOHANNESBURG ============ -->
+    <section class="section pdx pdx-sec" id="jhb">
+      <div class="wrap">
+          <article class="pdx-col pdx-wide reveal">
             <span class="pdx-count"><span class="sched-count" data-countdown="jhb"></span></span>
             <header class="pdx-head">
               <h3 class="pdx-city">Johannesburg</h3>
@@ -59,9 +93,16 @@
             <p class="pdx-hint">Tap the schedule to see it full size</p>
             <div class="pdx-ctas">
               <a class="btn btn-primary" data-ticket="jhb">Get JHB tickets</a>
+              <a class="link-arrow" href="lineup.html#jhb">Meet the JHB line-up</a>
             </div>
           </article>
-          <article class="pdx-col reveal">
+      </div>
+    </section>
+
+    <!-- ============ CAPE TOWN ============ -->
+    <section class="section pdx pdx-sec pdx-alt" id="cpt">
+      <div class="wrap">
+          <article class="pdx-col pdx-wide reveal">
             <span class="pdx-count"><span class="sched-count" data-countdown="cpt"></span></span>
             <header class="pdx-head">
               <h3 class="pdx-city">Cape Town</h3>
@@ -72,51 +113,12 @@
             <p class="pdx-hint">Tap the schedule to see it full size</p>
             <div class="pdx-ctas">
               <a class="btn btn-primary" data-ticket="cpt">Get CPT tickets</a>
+              <a class="link-arrow" href="lineup.html#cpt">Meet the CPT line-up</a>
             </div>
           </article>
-        </div>
       </div>
     </section>
 
-    <!-- ============ FACES OF THE DAY: PowerVOICES + PowerPERFORMERS ============ -->
-    <section class="section faces" id="faces">
-      <div class="wrap">
-        <div class="section-head center-head reveal">
-          <p class="eyebrow">The women on stage</p>
-          <h2 class="display">Meet your <span class="script">PowerDAY line-up</span></h2>
-          <div class="city-switch city-switch-dark" data-city-switch role="group" aria-label="Choose your city">
-            <button type="button" data-city="jhb" aria-pressed="true">Johannesburg • 7 Nov</button>
-            <button type="button" data-city="cpt" aria-pressed="false">Cape Town • 14 Nov</button>
-          </div>
-        </div>
-        <div class="fc-grid">
-          <div class="fc-group fc-voices" data-city-only="jhb">
-            <p class="fc-label">Power<b>VOICES</b> <span class="fc-city">Johannesburg</span></p>
-            <p class="fc-sub">Pulse Talk 13:30, Ladies Plank Challenge 14:10 &amp; Investec talk 14:20</p>
-            <ul class="fc-pills"><li class="fc-pill">Ayanda Thabethe</li><li class="fc-pill">Nandi Madida</li><li class="fc-pill">TK Louw</li><li class="fc-pill">Uleen Fourie</li><li class="fc-pill">Rechelle Kloeck</li><li class="fc-pill">Bronwyn Trower</li><li class="fc-pill">Elizabeth Fick</li><li class="fc-pill">Tracey Ward</li></ul>
-          </div>
-          <div class="fc-group fc-voices" data-city-only="cpt" hidden>
-            <p class="fc-label">Power<b>VOICES</b> <span class="fc-city">Cape Town</span></p>
-            <p class="fc-sub">Pulse Talk 13:30, Ladies Plank Challenge 14:10 &amp; Investec talk 14:20</p>
-            <ul class="fc-pills"><li class="fc-pill">Rachel Kolisi</li><li class="fc-pill">Savannah Cozzi</li><li class="fc-pill">TK Louw</li><li class="fc-pill">Uleen Fourie</li><li class="fc-pill">Rechelle Kloeck</li><li class="fc-pill">Elizabeth Fick</li><li class="fc-pill">Tracey Ward</li><li class="fc-pill">Tshego Ramatlo</li></ul>
-          </div>
-          <div class="fc-group" data-city-only="jhb">
-            <p class="fc-label">Power<b>PERFORMERS</b> <span class="fc-city">Johannesburg</span></p>
-            <p class="fc-sub">After party from 17:00</p>
-            <ul class="fc-pills"><li class="fc-pill is-main">Lady Zamar</li><li class="fc-pill is-main">Ayanda MVP</li><li class="fc-pill">Abi Danger</li><li class="fc-pill">Indigo</li><li class="fc-pill">Justine</li><li class="fc-pill">Kayzia</li><li class="fc-pill">Lady Lea</li><li class="fc-pill">Tinkz</li></ul>
-            <p class="fc-label fc-label-sm">On the decks at 15:10</p>
-            <ul class="fc-pills fc-pills-sm"><li class="fc-pill">DJ Justine B2B Abi Danger</li></ul>
-          </div>
-          <div class="fc-group" data-city-only="cpt" hidden>
-            <p class="fc-label">Power<b>PERFORMERS</b> <span class="fc-city">Cape Town</span></p>
-            <p class="fc-sub">After party from 17:00</p>
-            <ul class="fc-pills"><li class="fc-pill is-main">Lady Zamar</li><li class="fc-pill">Amy Jones</li><li class="fc-pill">Kayzia</li><li class="fc-pill">Mia</li><li class="fc-pill">Roxy Louw</li><li class="fc-pill">Tinkz</li></ul>
-            <p class="fc-label fc-label-sm">On the decks at 15:10</p>
-            <ul class="fc-pills fc-pills-sm"><li class="fc-pill">Roxy Louw</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ============ FINAL CTA ============ -->
     <section class="cta-band">
@@ -135,7 +137,7 @@
 
   <div data-ph="footer"></div>
 
-  <script src="js/config.js?v=62"></script>
-  <script src="js/layout.js?v=62"></script>
+  <script src="js/config.js?v=63"></script>
+  <script src="js/layout.js?v=63"></script>
 </body>
 </html>
