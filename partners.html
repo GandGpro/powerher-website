@@ -21,6 +21,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=67">
+  <style>
+    /* Dermalogica: a Trade Partner arch that flips open like the other "Read more" tiles */
+    .pt-derma { display: grid !important; min-height: 0 !important; padding: 0 !important; background: none !important; }
+    .pt-derma > div { width: 100%; }
+    .pt-derma.is-open { width: 100%; max-width: 100% !important; }
+    .pt-derma { grid-template-columns: 100%; grid-template-rows: 100%; }
+    .pt-derma > div { grid-area: 1 / 1 / 2 / 2 !important; min-width: 0; }
+    .pt-derma.is-open .ptile-back { width: 100% !important; max-width: none !important; }
+    .pt-derma > div { padding: 24px 16px 72px !important; gap: 0 !important; }
+    .pt-derma .ptile-front { background: linear-gradient(160deg, var(--purple) 0%, var(--purple-deep) 100%); }
+    .pt-derma .ptile-front .lw-logo { width: 84%; height: auto; }
+    .pt-derma .ptile-front .ptile-btn { font-size: .62rem; letter-spacing: .14em; padding: 9px 14px; border-radius: 12px; bottom: 22px; }
+    .pt-derma .ptile-back { background: #f1ecf8; color: var(--purple-ink); padding: 64px 32px 32px !important; gap: 12px !important; }
+    .pt-derma .ptile-back p { font-size: .95rem; line-height: 1.55; }
+    .pt-derma .ptile-back .ptile-line { font-size: 1.05rem !important; margin-top: 6px; }
+    .pt-derma.is-open { flex: 0 0 100% !important; max-width: 100%; height: auto !important; border-radius: 36px !important; transform: none !important; }
+    .pt-derma .ptile-back p { max-width: 62ch; }
+    @media (max-width: 600px) { .pt-derma .ptile-front .ptile-btn { font-size: .55rem; padding: 7px 10px; bottom: 16px; } .pt-derma .ptile-back { padding: 58px 20px 24px !important; } }
+  </style>
 </head>
 <body data-page="partners">
   <div data-ph="header"></div>
@@ -227,7 +246,20 @@
           <p class="eyebrow">Trade Partners</p>
         </div>
         <div class="logo-wall">
-          <div class="lw-tile  lw-arch reveal"><img class="lw-logo" src="assets/img/brand-dermalogica-white.webp" width="1200" height="124" alt="Dermalogica" loading="lazy"></div>
+          <article class="ptile lw-tile lw-arch pt-derma reveal" data-ptile>
+            <div class="ptile-front">
+              <img class="lw-logo" src="assets/img/brand-dermalogica-white.webp" width="1200" height="124" alt="Dermalogica" loading="lazy">
+              <button type="button" class="ptile-btn" aria-expanded="false" aria-controls="pt-derma">Read more<span class="sr"> about Dermalogica</span></button>
+            </div>
+            <div class="ptile-back" id="pt-derma" aria-hidden="true">
+              <button type="button" class="ptile-close" aria-label="Close Dermalogica"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+              <img class="ptile-logo-sm" src="assets/img/brand-dermalogica-purple.webp" width="1200" height="124" alt="" loading="lazy">
+              <p class="ptile-line">Professional-grade skin care since 1986</p>
+              <p>Dermalogica was founded by a skin therapist, so we know how to create custom skin care solutions that work – not just today, but for life. We offer professional-grade skin care education, products, and services to skin therapists and customers alike.</p>
+              <p class="ptile-line">Personalised skin care</p>
+              <p>We create highly customised regimens and services for every individual, because we know that no two skin conditions are the same. Our products work best when they are recommended by a professional skin therapist for your unique skin. Whatever your lifestyle, background or environment, rest assured that Dermalogica will work for you.</p>
+            </div>
+          </article>
           <div class="lw-tile  lw-arch reveal"><img class="lw-logo" src="assets/img/brand-burnt-b-white.webp" width="792" height="462" alt="Burnt Activewear" loading="lazy" style="height:auto;width:44%;max-width:44%"></div>
           <div class="lw-tile  lw-arch reveal"><img class="lw-logo" src="assets/img/brand-benefit-white.webp" width="1200" height="398" alt="Benefit Cosmetics" loading="lazy" style="height:auto;width:72%;max-width:72%"></div>
           <div class="lw-tile  lw-arch reveal"><img class="lw-logo" src="assets/img/brand-andiamo-white.webp" width="360" height="258" alt="Andiamo Spritz" loading="lazy" style="height:auto;width:66%;max-width:66%"></div>
