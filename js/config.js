@@ -8,7 +8,7 @@ window.PH = {
   /* PAGES THAT ARE LIVE
      Only these appear in the menu and footer. When a new page is built,
      add its name here (e.g. "legacy") and it shows up everywhere. */
-  livePages: ["home", "tickets", "experience", "lineup", "partners", "faq", "contact"],
+  livePages: ["home", "partners", "contact"],
 
   /* CONTACT DETAILS (Contact page and FAQs). Leave "" to hide a line. */
   contact: {
@@ -70,7 +70,7 @@ window.PH = {
      It opens HER WhatsApp; she picks who to send it to. Nothing is collected.
      Follows the Authors Guide partner order. */
   share: {
-    text: "Motherkind is proud to present PowerHER Fit Fest, in partnership with Investec and Dis-Chem: a full day live with Kayla Itsines. JHB 7 Nov or CPT 14 Nov. Who’s coming with me?",
+    text: "Motherkind PowerHER Fit Fest, in partnership with Investec and Dis-Chem, returns in 2027. Follow @powerherfitfest for the dates!",
     url: "https://powerherfitfest.com/"
   },
 
